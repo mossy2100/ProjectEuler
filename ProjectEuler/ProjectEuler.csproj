@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>AstroMultimedia.ProjectEuler</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="AstroMultimedia.Core.Collections">
+        <HintPath>..\..\Core\Collections\bin\Debug\net7.0\AstroMultimedia.Core.Collections.dll</HintPath>
+      </Reference>
+      <Reference Include="AstroMultimedia.Core.Numbers">
+        <HintPath>..\..\Core\Numbers\bin\Debug\net7.0\AstroMultimedia.Core.Numbers.dll</HintPath>
+      </Reference>
+      <Reference Include="AstroMultimedia.Core.Strings">
+        <HintPath>..\..\Core\Strings\bin\Debug\net7.0\AstroMultimedia.Core.Strings.dll</HintPath>
+      </Reference>
+      <Reference Include="AstroMultimedia.Core.Time">
+        <HintPath>..\..\Core\Time\bin\Debug\net7.0\AstroMultimedia.Core.Time.dll</HintPath>
+      </Reference>
+      <Reference Include="AstroMultimedia.Numerics.Integers">
+        <HintPath>..\..\Numerics\Integers\bin\Debug\net7.0\AstroMultimedia.Numerics.Integers.dll</HintPath>
+      </Reference>
+      <Reference Include="AstroMultimedia.Numerics.Types">
+        <HintPath>..\..\Numerics\Types\bin\Debug\net7.0\AstroMultimedia.Numerics.Types.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>
