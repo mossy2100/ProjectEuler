@@ -8,15 +8,15 @@ public static class Problem45
 {
     public static long Answer()
     {
-        int n = 285;
+        ulong n = 285;
         while (true)
         {
             n++;
-            long t = Triangular.Get(n);
-            if (Pentagonal.IsPentagonal(t) && Hexagonal.IsHexagonal(t))
+            ulong t = PolygonalNumbers.GetTriangular(n);
+            if (PolygonalNumbers.IsPentagonal(t) && PolygonalNumbers.IsHexagonal(t))
             {
                 // Found the answer.
-                return t;
+                return (long)t;
             }
         }
     }

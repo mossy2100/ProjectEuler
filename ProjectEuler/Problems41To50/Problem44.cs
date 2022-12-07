@@ -8,26 +8,26 @@ public static class Problem44
 {
     public static long Answer()
     {
-        int j = 1;
+        ulong j = 1;
         while (true)
         {
             // Get the next pentagonal number in the series.
-            long pj = Pentagonal.Get(j);
+            ulong pj = PolygonalNumbers.GetPentagonal(j);
 
             // Check the new number paired with all smaller pentagonal numbers.
             // Check in descending order to minimise the difference.
-            for (int k = j - 1; k >= 1; k--)
+            for (ulong k = j - 1; k >= 1; k--)
             {
-                long pk = Pentagonal.Get(k);
+                ulong pk = PolygonalNumbers.GetPentagonal(k);
                 // Console.WriteLine($"Comparing {pj} and {pk}");
 
                 // Calculate the sum and the difference;
-                long sum = pj + pk;
-                long diff = pj - pk;
-                if (Pentagonal.IsPentagonal(sum) && Pentagonal.IsPentagonal(diff))
+                ulong sum = pj + pk;
+                ulong diff = pj - pk;
+                if (PolygonalNumbers.IsPentagonal(sum) && PolygonalNumbers.IsPentagonal(diff))
                 {
                     // Found the answer.
-                    return diff;
+                    return (long)diff;
                 }
             }
 
@@ -39,17 +39,6 @@ public static class Problem44
             }
 
             j++;
-        }
-    }
-
-    public static void Test()
-    {
-        for (int i = 1; i < 150; i++)
-        {
-            if (Pentagonal.IsPentagonal(i))
-            {
-                Console.WriteLine($"{i} is pentagonal.");
-            }
         }
     }
 }
