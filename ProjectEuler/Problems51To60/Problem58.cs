@@ -3,7 +3,7 @@ using AstroMultimedia.Core.Time;
 namespace AstroMultimedia.ProjectEuler;
 
 /// <summary>
-///
+/// Spiral primes.
 /// <see href="https://projecteuler.net/problem=58" />
 /// </summary>
 public static class Problem58

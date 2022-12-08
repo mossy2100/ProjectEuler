@@ -1,7 +1,7 @@
 namespace AstroMultimedia.ProjectEuler;
 
 /// <summary>
-///
+/// Prime pair sets.
 /// <see href="https://projecteuler.net/problem=60" />
 /// </summary>
 public static class Problem60

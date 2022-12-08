@@ -3,7 +3,7 @@ using System.Text.Json;
 namespace AstroMultimedia.ProjectEuler;
 
 /// <summary>
-///
+/// Cyclical figurate numbers.
 /// <see href="https://projecteuler.net/problem=61" />
 /// </summary>
 public static class Problem61

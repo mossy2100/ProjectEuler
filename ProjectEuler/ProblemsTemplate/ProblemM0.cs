@@ -2,9 +2,9 @@ namespace AstroMultimedia.ProjectEuler;
 
 /// <summary>
 ///
-/// <see href="https://projecteuler.net/problem=N0" />
+/// <see href="https://projecteuler.net/problem=M0" />
 /// </summary>
-public static class ProblemN0
+public static class ProblemM0
 {
     public static long Answer()
     {
