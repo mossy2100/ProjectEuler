@@ -15,7 +15,7 @@ public static class Problem53
         {
             for (int r = 1; r < n; r++)
             {
-                BigInteger c = Factorials.Combination(n, r);
+                BigInteger c = Factorials.NumCombinations(n, r);
                 if (c > 1000000)
                 {
                     count++;

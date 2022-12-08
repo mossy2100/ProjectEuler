@@ -13,6 +13,9 @@
     &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test31To40.cs&lt;/ProjectFile&gt;
     &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test41To50.cs&lt;/ProjectFile&gt;
     &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test51To60.cs&lt;/ProjectFile&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::AstroMultimedia.ProjectEuler.Tests.Test61To70.TestProblem61&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
   &lt;/Or&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b7eac556_002D8531_002D4ba1_002D8e21_002D5afd9f09f21f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
