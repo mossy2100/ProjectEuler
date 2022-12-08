@@ -12,24 +12,24 @@ public class Test61To70
     [TestMethod]
     public void TestProblem63() => Assert.AreEqual(49, Problem63.Answer());
 
+    [TestMethod]
+    public void TestProblem64() => Assert.AreEqual(1322, Problem64.Answer());
+
     // [TestMethod]
-    // public void TestProblem64() => Assert.AreEqual(376, Problem64.Answer());
+    // public void TestProblem65() => Assert.AreEqual(1322, Problem65.Answer());
     //
     // [TestMethod]
-    // public void TestProblem65() => Assert.AreEqual(249, Problem65.Answer());
+    // public void TestProblem66() => Assert.AreEqual(0, Problem66.Answer());
     //
     // [TestMethod]
-    // public void TestProblem66() => Assert.AreEqual(972, Problem66.Answer());
+    // public void TestProblem67() => Assert.AreEqual(0, Problem67.Answer());
     //
     // [TestMethod]
-    // public void TestProblem67() => Assert.AreEqual(153, Problem67.Answer());
+    // public void TestProblem68() => Assert.AreEqual(0, Problem68.Answer());
     //
     // [TestMethod]
-    // public void TestProblem68() => Assert.AreEqual(26241, Problem68.Answer());
+    // public void TestProblem69() => Assert.AreEqual(0, Problem69.Answer());
     //
     // [TestMethod]
-    // public void TestProblem69() => Assert.AreEqual(129448, Problem69.Answer());
-    //
-    // [TestMethod]
-    // public void TestProblem70() => Assert.AreEqual(26033, Problem70.Answer());
+    // public void TestProblem70() => Assert.AreEqual(0, Problem70.Answer());
 }
