@@ -15,9 +15,9 @@ public class Test61To70
     [TestMethod]
     public void TestProblem64() => Assert.AreEqual(1322, Problem64.Answer());
 
-    // [TestMethod]
-    // public void TestProblem65() => Assert.AreEqual(1322, Problem65.Answer());
-    //
+    [TestMethod]
+    public void TestProblem65() => Assert.AreEqual(272, Problem65.Answer());
+
     // [TestMethod]
     // public void TestProblem66() => Assert.AreEqual(0, Problem66.Answer());
     //
