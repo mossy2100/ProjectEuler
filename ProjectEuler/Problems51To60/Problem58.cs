@@ -1,5 +1,3 @@
-using AstroMultimedia.Core.Time;
-
 namespace AstroMultimedia.ProjectEuler;
 
 /// <summary>
@@ -47,7 +45,7 @@ public static class Problem58
         }
 
         long t2 = DateTime.Now.Ticks;
-        long t = (long)((t2 - t1) / Time.TICKS_PER_MILLISECOND);
+        long t = (t2 - t1) / TimeSpan.TicksPerMillisecond;
         Console.WriteLine($"Total execution time = {t} ms.");
 
         return size;
