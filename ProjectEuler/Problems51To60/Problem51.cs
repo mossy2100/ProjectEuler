@@ -18,7 +18,7 @@ public static class Problem51
         while (true)
         {
             // Get max value with this many digits.
-            ulong max = (ulong)Pow(10, nDigits) - 1;
+            uint max = (uint)Pow(10, nDigits) - 1;
 
             // Get all primes up to this value.
             List<ulong> primes = Primes.GetPrimesUpTo(max);

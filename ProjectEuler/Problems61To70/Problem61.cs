@@ -8,8 +8,8 @@ namespace AstroMultimedia.ProjectEuler;
 /// </summary>
 public static class Problem61
 {
-    private const int _MIN = 11;
-    private const int _MAX = 99;
+    private const int _Min = 11;
+    private const int _Max = 99;
 
     /// <summary>
     /// Given a current problem state and a candidate next 2-digit number, find any possible
@@ -52,10 +52,12 @@ public static class Problem61
     {
         // Create initial states, one for each possible starting number, from 11..99.
         List<Problem61State> newResults = new ();
-        for (int x0 = _MIN; x0 <= _MAX; x0++)
+        for (int x0 = _Min; x0 <= _Max; x0++)
         {
-            Problem61State state = new ();
-            state.TwoDigitNums[0] = x0;
+            Problem61State state = new ()
+            {
+                TwoDigitNums = { [0] = x0 }
+            };
             newResults.Add(state);
         }
 
@@ -67,7 +69,7 @@ public static class Problem61
             newResults = new List<Problem61State>();
             foreach (Problem61State result in results)
             {
-                for (int x1 = _MIN; x1 <= _MAX; x1++)
+                for (int x1 = _Min; x1 <= _Max; x1++)
                 {
                     List<Problem61State> states = FindNextStates(result, x1);
                     newResults.AddRange(states);

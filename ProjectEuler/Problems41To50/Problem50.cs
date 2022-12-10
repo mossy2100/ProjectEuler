@@ -9,7 +9,7 @@ public static class Problem50
     public static long Answer()
     {
         // Find all the primes we need for this problem.
-        ulong max = 1_000_000;
+        uint max = 1_000_000;
         List<ulong> primes = Primes.GetPrimesUpTo(max);
 
         // Keep track of the best solution.

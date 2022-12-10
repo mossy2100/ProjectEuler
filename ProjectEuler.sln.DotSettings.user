@@ -8,7 +8,7 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
   &lt;Assembly Path="/Users/shaun/Documents/Web &amp;amp; software development/C#/Projects/AstroMultimedia/Core/Numbers/bin/Debug/net7.0/AstroMultimedia.Core.Numbers.dll" /&gt;
 &lt;/AssemblyExplorer&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8e9a218a_002D790b_002D4099_002D9bfd_002D21194cc42ddf/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestProblem10" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8e9a218a_002D790b_002D4099_002D9bfd_002D21194cc42ddf/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestProblem10" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Or&gt;
     &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test1To10.cs&lt;/ProjectFile&gt;
     &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test11To20.cs&lt;/ProjectFile&gt;
@@ -25,6 +25,6 @@
     &lt;/TestAncestor&gt;
   &lt;/Or&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b7eac556_002D8531_002D4ba1_002D8e21_002D5afd9f09f21f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b7eac556_002D8531_002D4ba1_002D8e21_002D5afd9f09f21f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
