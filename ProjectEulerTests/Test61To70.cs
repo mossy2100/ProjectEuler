@@ -24,12 +24,12 @@ public class Test61To70
     [TestMethod]
     public void TestProblem67() => Assert.AreEqual(7273, Problem67.Answer());
 
-    // [TestMethod]
-    // public void TestProblem68() => Assert.AreEqual(0, Problem68.Answer());
-    //
-    // [TestMethod]
-    // public void TestProblem69() => Assert.AreEqual(0, Problem69.Answer());
-    //
+    [TestMethod]
+    public void TestProblem68() => Assert.AreEqual(6531031914842725, Problem68.Answer());
+
+    [TestMethod]
+    public void TestProblem69() => Assert.AreEqual(0, Problem69.Answer());
+
     // [TestMethod]
     // public void TestProblem70() => Assert.AreEqual(0, Problem70.Answer());
 }

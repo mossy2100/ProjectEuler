@@ -1,5 +1,3 @@
-using System.Numerics;
-
 namespace AstroMultimedia.ProjectEuler;
 
 /// <summary>
