@@ -1,3 +1,4 @@
+using System.Numerics;
 using AstroMultimedia.Core.Numbers;
 
 namespace AstroMultimedia.ProjectEuler;
@@ -8,53 +9,31 @@ namespace AstroMultimedia.ProjectEuler;
 /// </summary>
 public static class Problem66
 {
-    public static readonly List<long> SquaresCache = new ();
-
-    public static long Sqr(int x)
-    {
-        if (x >= SquaresCache.Count)
-        {
-            SquaresCache.EnsureCapacity(x + 1);
-            SquaresCache[x] = (long)(x) * x;
-        }
-        return SquaresCache[x];
-    }
-
     public static long Answer()
     {
-        long largestX = 0;
-        long DForLargestX = 0;
-        for (long D = 2; D <= 1000; D++)
+        BigInteger largestX = 0;
+        int DForLargestX = 0;
+        int min = 2;
+        int max = 1000;
+        for (int D = min; D <= max; D++)
         {
+            Console.WriteLine();
+            Console.WriteLine($"D = {D}:");
+
             // Skip squares.
-            if (PolygonalNumbers.IsSquare((ulong)D))
+            if (XDouble.IsPerfectSquare(D))
             {
+                Console.WriteLine("Perfect square, skipping.");
                 continue;
             }
 
-            int x = 1;
-            while (true)
+            (BigInteger x, BigInteger y) = Pell.Solve(D);
+            Console.WriteLine($"{x:N0}² - {D}×{y:N0}² = 1");
+
+            if (x > largestX)
             {
-                // Solve for y.
-                double dy = Sqrt((Sqr(x) - 1) / (double)D);
-                if (XDouble.FuzzyIsPositiveInteger(dy, 1e-5))
-                {
-                    int y = (int)Round(dy);
-
-                    // Double-check because imprecision of doubles is giving false positives.
-                    if (Sqr(x) - D * Sqr(y) == 1)
-                    {
-                        Console.WriteLine($"{x}^2 - {D}x{y}^2 = 1");
-                        if (x > largestX)
-                        {
-                            largestX = x;
-                            DForLargestX = D;
-                        }
-                        break;
-                    }
-                }
-
-                x++;
+                largestX = x;
+                DForLargestX = D;
             }
         }
 
