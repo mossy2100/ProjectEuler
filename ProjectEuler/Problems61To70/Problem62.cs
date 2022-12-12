@@ -49,11 +49,11 @@ public static class Problem62
             for (int i0 = 0; i0 < cubes.Count - 4; i0++)
             {
                 ulong cube0 = cubes[i0];
-                string str0 = SortDigits(cube0);
+                string str0 = Factorials.SortDigits(cube0);
                 for (int i1 = i0 + 1; i1 < cubes.Count - 3; i1++)
                 {
                     ulong cube1 = cubes[i1];
-                    string str1 = SortDigits(cube1);
+                    string str1 = Factorials.SortDigits(cube1);
                     if (str0 != str1)
                     {
                         continue;
@@ -62,7 +62,7 @@ public static class Problem62
                     for (int i2 = i1 + 1; i2 < cubes.Count - 2; i2++)
                     {
                         ulong cube2 = cubes[i2];
-                        string str2 = SortDigits(cube2);
+                        string str2 = Factorials.SortDigits(cube2);
                         if (str0 != str2)
                         {
                             continue;
@@ -71,7 +71,7 @@ public static class Problem62
                         for (int i3 = i2 + 1; i3 < cubes.Count - 1; i3++)
                         {
                             ulong cube3 = cubes[i3];
-                            string str3 = SortDigits(cube3);
+                            string str3 = Factorials.SortDigits(cube3);
                             if (str0 != str3)
                             {
                                 continue;
@@ -80,7 +80,7 @@ public static class Problem62
                             for (int i4 = i3 + 1; i4 < cubes.Count; i4++)
                             {
                                 ulong cube4 = cubes[i4];
-                                string str4 = SortDigits(cube4);
+                                string str4 = Factorials.SortDigits(cube4);
                                 if (str0 != str4)
                                 {
                                     continue;
@@ -97,12 +97,5 @@ public static class Problem62
             // Try larger numbers.
             nDigits++;
         }
-    }
-
-    public static string SortDigits(ulong n)
-    {
-        char[] firstChars = n.ToString().ToCharArray();
-        Array.Sort(firstChars);
-        return new string(firstChars);
     }
 }
