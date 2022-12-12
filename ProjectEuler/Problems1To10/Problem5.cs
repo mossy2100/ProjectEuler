@@ -13,7 +13,7 @@ public static class Problem5
         List<ulong> factors = new();
         for (ulong i = 2; i <= 20; i++)
         {
-            List<ulong> factors2 = Primes.GetPrimeFactors(i);
+            List<ulong> factors2 = Primes.PrimeFactors(i);
             IEnumerable<ulong> newFactors = factors2.Diff(factors);
             factors.AddRange(newFactors);
         }
