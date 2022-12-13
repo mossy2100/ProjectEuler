@@ -30,15 +30,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Remove="Problems71To80\ProblemM0.cs" />
       <Compile Remove="Problems71To80\ProblemN2.cs" />
-      <Compile Remove="Problems71To80\ProblemN3.cs" />
-      <Compile Remove="Problems71To80\ProblemN4.cs" />
-      <Compile Remove="Problems71To80\ProblemN5.cs" />
-      <Compile Remove="Problems71To80\ProblemN6.cs" />
-      <Compile Remove="Problems71To80\ProblemN7.cs" />
-      <Compile Remove="Problems71To80\ProblemN8.cs" />
-      <Compile Remove="Problems71To80\ProblemN9.cs" />
     </ItemGroup>
 
 </Project>
