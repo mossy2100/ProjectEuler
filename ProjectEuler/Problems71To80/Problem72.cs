@@ -8,19 +8,18 @@ public static class Problem72
 {
     public static long Answer()
     {
-        ulong count = 1;
-        Console.WriteLine("1/2");
-        for (ulong den = 2; den <= 1_000_000; den++)
+        long count = 0;
+        ulong max = 1_000_000;
+        for (ulong den = 2; den <= max; den++)
         {
-            for (ulong num = 1; num < (den / 2.0); num++)
+            count += (long)Primes.Totient(den);
+
+            // DEBUG
+            if (den % 1000 == 0)
             {
-                if (Primes.AreCoprime(num, den))
-                {
-                    count += 2;
-                    Console.WriteLine($"{num}/{den} and {den - num}/{den}");
-                }
+                Console.WriteLine($"den = {den}, count = {count}");
             }
         }
-        return (long)count;
+        return count;
     }
 }
