@@ -9,9 +9,9 @@ public class Test71To80
     [TestMethod]
     public void TestProblem72() => Assert.AreEqual(303963552391, Problem72.Answer());
 
-    // [TestMethod]
-    // public void TestProblem73() => Assert.AreEqual(49, Problem73.Answer());
-    //
+    [TestMethod]
+    public void TestProblem73() => Assert.AreEqual(7295372, Problem73.Answer());
+
     // [TestMethod]
     // public void TestProblem74() => Assert.AreEqual(1322, Problem74.Answer());
     //
