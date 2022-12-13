@@ -23,7 +23,7 @@ public static class Problem22
         foreach (string name in names)
         {
             position++;
-            int value = GetAlphabeticalValue(name);
+            int value = NumberStrings.GetAlphabeticalValue(name);
             int score = position * value;
             total += score;
         }

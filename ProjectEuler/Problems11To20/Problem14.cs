@@ -10,17 +10,17 @@ public static class Problem14
     {
         for (int i = 1; i <= 20; i++)
         {
-            Console.WriteLine(string.Join(", ", Collatz(i)));
+            Console.WriteLine(string.Join(", ", Sequences.Collatz(i)));
         }
     }
-    
+
     public static long Answer()
     {
         int longestChainLength = 0;
         int startOfLongestChain = 0;
         for (int i = 1; i < 1_000_000; i++)
         {
-            int len = Collatz(i).Count; 
+            int len = Sequences.Collatz(i).Count;
             if (len > longestChainLength)
             {
                 longestChainLength = len;

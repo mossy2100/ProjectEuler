@@ -15,7 +15,7 @@ public static class Problem57
         for (int i = 0; i < 1000; i++)
         {
             f = 1 + (1 / (f + 1));
-            if (NumDigits(f.Numerator) > NumDigits(f.Denominator))
+            if (Digits.NumDigits(f.Numerator) > Digits.NumDigits(f.Denominator))
             {
                 count++;
             }

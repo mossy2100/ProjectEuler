@@ -9,6 +9,6 @@ public static class Problem41
     public static long Answer()
     {
         List<ulong> primes = Primes.GetPrimesUpTo(987654321);
-        return (long)primes.LastOrDefault(IsPandigital);
+        return (long)primes.LastOrDefault(Digits.IsPandigital);
     }
 }

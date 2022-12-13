@@ -15,7 +15,7 @@ public static class Problem12
         while (true)
         {
             triangleNumber += i;
-            List<BigInteger> divisors = GetDivisors(triangleNumber);
+            List<BigInteger> divisors = Divisors.GetDivisors(triangleNumber);
             if (divisors.Count > 500)
             {
                 return triangleNumber;

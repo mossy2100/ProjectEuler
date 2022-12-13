@@ -10,7 +10,7 @@ public static class Problem26
     {
         for (int i = 2; i < 100; i++)
         {
-            string j = Inverse(i, out string? reptend);
+            string j = NumberStrings.Inverse(i, out string? reptend);
             Console.WriteLine($"1/{i} = {1m / i} = {j}");
             if (reptend != null)
             {
@@ -25,7 +25,7 @@ public static class Problem26
         int maxReptendLength = 0;
         for (int d = 2; d < 1000; d++)
         {
-            Inverse(d, out string? reptend);
+            NumberStrings.Inverse(d, out string? reptend);
             if (reptend == null)
             {
                 continue;

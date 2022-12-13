@@ -41,7 +41,7 @@ public static class Problem51
                     {
                         string sNewNum = sNum.Replace(c, d);
                         ulong newNum = ulong.Parse(sNewNum);
-                        if (NumDigits(newNum) == nDigits && Primes.IsPrime(newNum))
+                        if (Digits.NumDigits(newNum) == nDigits && Primes.IsPrime(newNum))
                         {
                             group.Add(newNum);
                         }

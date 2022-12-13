@@ -9,7 +9,7 @@ namespace AstroMultimedia.ProjectEuler;
 public static class Problem21
 {
     private static long D(long n) =>
-        (long)GetProperDivisors(n).Sum();
+        (long)Divisors.GetProperDivisors(n).Sum();
 
     public static long Answer()
     {

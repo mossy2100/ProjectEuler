@@ -22,7 +22,7 @@ public static class Problem35
         foreach (long prime in primes)
         {
             // Check all rotations to see if they're also prime.
-            List<ulong> rotations = GetRotations(prime);
+            List<ulong> rotations = Digits.GetRotations(prime);
             if (rotations.All(Primes.IsPrime))
             {
                 Console.WriteLine($"All rotations of {prime} are prime: {string.Join(", ", rotations)}");

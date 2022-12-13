@@ -18,13 +18,13 @@ public static class Problem42
         int maxLen = words.Select(word => word.Length).Max();
 
         // Calculate the max word value.
-        uint maxValue = (uint)GetAlphabeticalValue(new string('z', maxLen));
+        uint maxValue = (uint)NumberStrings.GetAlphabeticalValue(new string('z', maxLen));
 
         // Get all triangle numbers up to maxValue.
         Dictionary<ulong, ulong> triangularNums = PolygonalNumbers.GetAllTriangularUpTo(maxValue);
 
         // Count the number of words with a value that is a triangle number.
-        return words.Select(GetAlphabeticalValue)
+        return words.Select(NumberStrings.GetAlphabeticalValue)
             .Count(value => triangularNums.ContainsValue((ulong)value));
     }
 }

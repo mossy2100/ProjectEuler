@@ -9,7 +9,7 @@ public static class Problem28
     public static long Answer()
     {
         const int SIZE = 1001;
-        uint?[,] spiral = ConstructSpiral(SIZE, true, EDirection.Right);
+        uint?[,] spiral = Grids.ConstructSpiral(SIZE, true, EDirection.Right);
         // PrintGrid(spiral, size);
 
         // Sum the diagonals.

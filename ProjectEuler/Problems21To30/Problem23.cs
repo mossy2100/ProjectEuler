@@ -1,7 +1,7 @@
 namespace AstroMultimedia.ProjectEuler;
 
 /// <summary>
-/// 
+///
 /// <see href="https://projecteuler.net/problem=23" />
 /// </summary>
 public static class Problem23
@@ -15,7 +15,7 @@ public static class Problem23
         List<int> abundantNumbers = new();
         for (int i = 1; i <= max; i++)
         {
-            if (PerfectNumber(i) == 1)
+            if (Divisors.PerfectNumber(i) == 1)
             {
                 abundantNumbers.Add(i);
             }
@@ -38,7 +38,7 @@ public static class Problem23
                 {
                     continue;
                 }
-                
+
                 isSumOf2AbundantNums = true;
                 // Console.WriteLine($"{i} = {a} + {b}");
                 break;
