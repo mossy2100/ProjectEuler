@@ -1,9 +1,7 @@
-using System.Runtime.InteropServices.ComTypes;
-
 namespace AstroMultimedia.ProjectEuler;
 
 /// <summary>
-///
+/// Singular integer right triangles.
 /// <see href="https://projecteuler.net/problem=75" />
 /// </summary>
 public static class Problem75
