@@ -11,25 +11,26 @@ public static class Problem75
         // Set the maximum perimeter.
         const ulong max = 1_500_000;
 
-        // Keep track of how many solutions we find, grouped by perimeter.
+        // Keep track of the primitive Pythagorean triples.
         List<(ulong a, ulong b, ulong c)> triples = new ();
 
         // Also keep track of how many solutions we find for each length.
         int[] count = new int[max + 1];
 
-        // Find all the Pythagorean primitives up to max length.
+        // Find all the primitive Pythagorean triples up to max length, using Euclid's formula.
+        // <see href="https://en.wikipedia.org/wiki/Pythagorean_triple#Generating_a_triple" />
 
         // Try values for n.
         ulong n = 1;
         bool done = false;
         while (!done)
         {
-            // Try values for m. We know m > n, and that one is odd, one is even.
+            // Try values for m. We know m > n, and either m or n is even (not both).
             ulong m = n + 1;
 
             while (true)
             {
-                // Check m and n are coprime.
+                // We're looking for primitive triples only, so check m and n are coprime.
                 if (!Primes.AreCoprime(n, m))
                 {
                     m += 2;
@@ -48,7 +49,7 @@ public static class Problem75
                 if (len > max)
                 {
                     // If m is the minimum value for this n, and the length is too large,
-                    // n is now too large, so exit the outer (n) loop.
+                    // that means n is now too large, so we're done.
                     if (m == n + 1)
                     {
                         done = true;
@@ -56,7 +57,7 @@ public static class Problem75
                     break;
                 }
 
-                // Check we haven't found it already.
+                // Check we haven't found this one already.
                 (ulong a, ulong b, ulong c) triple = (a, b, c);
                 if (!triples.Contains(triple))
                 {
