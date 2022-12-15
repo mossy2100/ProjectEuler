@@ -16,7 +16,7 @@ public class Test71To80
     public void TestProblem74() => Assert.AreEqual(402, Problem74.Answer());
 
     [TestMethod]
-    public void TestProblem75() => Assert.AreEqual(161667, Problem75.Answer2());
+    public void TestProblem75() => Assert.AreEqual(161667, Problem75.Answer());
 
     // [TestMethod]
     // public void TestProblem76() => Assert.AreEqual(661, Problem76.Answer());
