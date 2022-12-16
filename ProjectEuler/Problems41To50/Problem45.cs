@@ -12,8 +12,8 @@ public static class Problem45
         while (true)
         {
             n++;
-            ulong t = PolygonalNumbers.GetTriangular(n);
-            if (PolygonalNumbers.IsPentagonal(t) && PolygonalNumbers.IsHexagonal(t))
+            ulong t = Polygonal.GetTriangular(n);
+            if (Polygonal.IsPentagonal(t) && Polygonal.IsHexagonal(t))
             {
                 // Found the answer.
                 return (long)t;

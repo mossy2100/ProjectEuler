@@ -21,7 +21,7 @@ public static class Problem42
         uint maxValue = (uint)NumberStrings.GetAlphabeticalValue(new string('z', maxLen));
 
         // Get all triangle numbers up to maxValue.
-        Dictionary<ulong, ulong> triangularNums = PolygonalNumbers.GetAllTriangularUpTo(maxValue);
+        Dictionary<ulong, ulong> triangularNums = Polygonal.GetAllTriangularUpTo(maxValue);
 
         // Count the number of words with a value that is a triangle number.
         return words.Select(NumberStrings.GetAlphabeticalValue)

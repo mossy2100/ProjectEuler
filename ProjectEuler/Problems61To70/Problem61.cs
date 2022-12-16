@@ -30,7 +30,7 @@ public static class Problem61
                 int x = x0 * 100 + x1;
 
                 // Check if it's polygonal.
-                bool isPolygonal = PolygonalNumbers.IsPolygonal(s, (ulong)x);
+                bool isPolygonal = Polygonal.IsPolygonal(s, (ulong)x);
 
                 // If so, construct the new problem state and add it to the results.
                 if (isPolygonal)

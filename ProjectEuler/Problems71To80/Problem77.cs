@@ -1,13 +1,59 @@
 namespace AstroMultimedia.ProjectEuler;
 
 /// <summary>
-///
+/// Prime summations.
 /// <see href="https://projecteuler.net/problem=77" />
 /// </summary>
 public static class Problem77
 {
+    /// <summary>
+    /// Count the number of ways a number n can be written as a sum of primes.
+    /// The first value in the sequence cannot be greater than max.
+    /// </summary>
+    /// <param name="n"></param>
+    /// <param name="max"></param>
+    /// <returns></returns>
+    public static int CountWays(int n, int? max = null)
+    {
+        // Default max first number.
+        if (max is null)
+        {
+            max = n;
+        }
+
+        int count = 0;
+
+        // Get primes up to the smaller of n and max.
+        List<ulong> primes = Primes.GetPrimesUpTo((ulong)Min(n, (int)max));
+
+        // Let a be the first in the series of primes that form the sum.
+        // It cannot be greater than max.
+        for (int i = primes.Count - 1; i >= 0; i--)
+        {
+            int a = (int)primes[i];
+            if (a == n)
+            {
+                count++;
+            }
+            else
+            {
+                count += CountWays(n - a, a);
+            }
+        }
+
+        return count;
+    }
+
     public static long Answer()
     {
-        return 0;
+        int n = 10;
+        while (true)
+        {
+            if (CountWays(n) >= 5000)
+            {
+                return n;
+            }
+            n++;
+        }
     }
 }
