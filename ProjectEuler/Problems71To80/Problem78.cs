@@ -8,6 +8,15 @@ public static class Problem78
 {
     public static long Answer()
     {
-        return 0;
+        ushort n = 0;
+        while (true)
+        {
+            if (Partitions.P(n) % 1_000_000 == 0)
+            {
+                break;
+            }
+            n++;
+        }
+        return n;
     }
 }
