@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace AstroMultimedia.ProjectEuler;
+namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Largest product in a grid.

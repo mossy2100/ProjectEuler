@@ -1,4 +1,4 @@
-namespace AstroMultimedia.ProjectEuler.Tests;
+namespace Galaxon.ProjectEuler.Tests;
 
 [TestClass]
 public class Test61To70

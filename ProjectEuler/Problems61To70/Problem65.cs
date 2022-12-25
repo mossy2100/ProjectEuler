@@ -1,6 +1,6 @@
-using AstroMultimedia.Numerics.Types;
+using Galaxon.Numerics.Types;
 
-namespace AstroMultimedia.ProjectEuler;
+namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Convergents of e.
@@ -14,7 +14,7 @@ public static class Problem65
     public static long Answer()
     {
         int n = 100;
-        Fraction f = ESequence(n - 2);
+        BigRational f = ESequence(n - 2);
         for (int m = n - 2; m >= 0; m--)
         {
             int prevTerm = (m == 0) ? 0 : ESequence(m - 1);

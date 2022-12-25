@@ -1,4 +1,4 @@
-namespace AstroMultimedia.ProjectEuler;
+namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// 10001st prime.

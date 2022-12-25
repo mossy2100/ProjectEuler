@@ -1,2 +1,2 @@
-global using AstroMultimedia.Numerics.Integers;
+global using Galaxon.Numerics.Integers;
 global using static System.Math;

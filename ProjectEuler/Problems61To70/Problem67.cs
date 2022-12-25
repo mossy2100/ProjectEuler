@@ -1,4 +1,4 @@
-namespace AstroMultimedia.ProjectEuler;
+namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Maximum path sum II.

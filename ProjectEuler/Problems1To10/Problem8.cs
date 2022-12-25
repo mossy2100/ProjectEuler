@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace AstroMultimedia.ProjectEuler;
+namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Largest product in a series.

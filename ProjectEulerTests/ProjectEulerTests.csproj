@@ -5,7 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
-        <RootNamespace>AstroMultimedia.ProjectEuler.Tests</RootNamespace>
+        <RootNamespace>Galaxon.ProjectEuler.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

@@ -7,7 +7,7 @@
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002FUsers_002Fshaun_002FDocuments_002FWeb_0020_0026_0020software_0020development_002FC_0023_002FProjects_002FAstroMultimedia_002FNumerics_002FNumbers_002Fbin_002FDebug_002Fnet7_002E0_002FAstroMultimedia_002ENumerics_002ENumbers_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002FUsers_002Fshaun_002FDocuments_002FWeb_0020_0026_0020software_0020development_002FC_0023_002FProjects_002FAstroMultimedia_002FNumerics_002FTypes_002Fbin_002FDebug_002Fnet7_002E0_002FAstroMultimedia_002ENumerics_002ETypes_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
-  &lt;Assembly Path="/Users/shaun/Documents/Web &amp;amp; software development/C#/Projects/AstroMultimedia/Core/Numbers/bin/Debug/net7.0/AstroMultimedia.Core.Numbers.dll" /&gt;
+  &lt;Assembly Path="/Users/shaun/Documents/Web &amp;amp; software development/C#/Projects/Galaxon/Core/Numbers/bin/Debug/net7.0/Galaxon.Core.Numbers.dll" /&gt;
 &lt;/AssemblyExplorer&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8e9a218a_002D790b_002D4099_002D9bfd_002D21194cc42ddf/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestProblem10" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Or&gt;
@@ -18,18 +18,18 @@
     &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test41To50.cs&lt;/ProjectFile&gt;
     &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test51To60.cs&lt;/ProjectFile&gt;
     &lt;TestAncestor&gt;
-      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::AstroMultimedia.ProjectEuler.Tests.Test61To70.TestProblem61&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::AstroMultimedia.ProjectEuler.Tests.Test61To70.TestProblem62&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::AstroMultimedia.ProjectEuler.Tests.Test61To70.TestProblem63&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::AstroMultimedia.ProjectEuler.Tests.Test61To70.TestProblem65&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::AstroMultimedia.ProjectEuler.Tests.Test61To70.TestProblem64&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::AstroMultimedia.ProjectEuler.Tests.Test61To70.TestProblem66&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::AstroMultimedia.ProjectEuler.Tests.Test61To70.TestProblem67&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::AstroMultimedia.ProjectEuler.Tests.Test61To70.TestProblem69&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::AstroMultimedia.ProjectEuler.Tests.Test61To70.TestProblem70&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::AstroMultimedia.ProjectEuler.Tests.Test71To80.TestProblem72&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::AstroMultimedia.ProjectEuler.Tests.Test71To80.TestProblem73&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::AstroMultimedia.ProjectEuler.Tests.Test71To80&lt;/TestId&gt;
+      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::Galaxon.ProjectEuler.Tests.Test61To70.TestProblem61&lt;/TestId&gt;
+      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::Galaxon.ProjectEuler.Tests.Test61To70.TestProblem62&lt;/TestId&gt;
+      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::Galaxon.ProjectEuler.Tests.Test61To70.TestProblem63&lt;/TestId&gt;
+      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::Galaxon.ProjectEuler.Tests.Test61To70.TestProblem65&lt;/TestId&gt;
+      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::Galaxon.ProjectEuler.Tests.Test61To70.TestProblem64&lt;/TestId&gt;
+      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::Galaxon.ProjectEuler.Tests.Test61To70.TestProblem66&lt;/TestId&gt;
+      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::Galaxon.ProjectEuler.Tests.Test61To70.TestProblem67&lt;/TestId&gt;
+      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::Galaxon.ProjectEuler.Tests.Test61To70.TestProblem69&lt;/TestId&gt;
+      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::Galaxon.ProjectEuler.Tests.Test61To70.TestProblem70&lt;/TestId&gt;
+      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::Galaxon.ProjectEuler.Tests.Test71To80.TestProblem72&lt;/TestId&gt;
+      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::Galaxon.ProjectEuler.Tests.Test71To80.TestProblem73&lt;/TestId&gt;
+      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net7.0::Galaxon.ProjectEuler.Tests.Test71To80&lt;/TestId&gt;
     &lt;/TestAncestor&gt;
   &lt;/Or&gt;
 &lt;/SessionState&gt;</s:String>

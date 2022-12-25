@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace AstroMultimedia.ProjectEuler;
+namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Cyclical figurate numbers.

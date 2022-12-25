@@ -1,6 +1,6 @@
-using AstroMultimedia.Numerics.Types;
+using Galaxon.Numerics.Types;
 
-namespace AstroMultimedia.ProjectEuler;
+namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Digit cancelling fractions.
@@ -92,7 +92,7 @@ public static class Problem33
             }
         }
 
-        Fraction f = new (nProd, dProd, true);
+        BigRational f = new (nProd, dProd, true);
         Console.WriteLine($"The product is {nProd}/{dProd}, which simplifies to {f.Numerator}/{f.Denominator}");
 
         return (long)f.Denominator;

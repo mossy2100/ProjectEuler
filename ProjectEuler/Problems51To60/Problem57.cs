@@ -1,6 +1,6 @@
-using AstroMultimedia.Numerics.Types;
+using Galaxon.Numerics.Types;
 
-namespace AstroMultimedia.ProjectEuler;
+namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Square root convergents.
@@ -11,7 +11,7 @@ public static class Problem57
     public static long Answer()
     {
         int count = 0;
-        Fraction f = 1 + new Fraction(1, 2);
+        BigRational f = 1 + new BigRational(1, 2);
         for (int i = 0; i < 1000; i++)
         {
             f = 1 + (1 / (f + 1));

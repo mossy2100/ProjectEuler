@@ -1,6 +1,6 @@
-using AstroMultimedia.Core.Collections;
+using Galaxon.Core.Collections;
 
-namespace AstroMultimedia.ProjectEuler;
+namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Smallest multiple.

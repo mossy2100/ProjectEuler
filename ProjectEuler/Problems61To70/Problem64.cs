@@ -1,6 +1,6 @@
-using AstroMultimedia.Core.Numbers;
+using Galaxon.Core.Numbers;
 
-namespace AstroMultimedia.ProjectEuler;
+namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Odd period square roots.
@@ -58,7 +58,7 @@ public static class Problem64
 }
 
 /// <summary>
-/// Fraction of the form (√A - B) / C
+/// BigRational of the form (√A - B) / C
 /// </summary>
 public class Problem64Fraction
 {

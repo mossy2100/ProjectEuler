@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace AstroMultimedia.ProjectEuler;
+namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// 1000-digit Fibonacci number.

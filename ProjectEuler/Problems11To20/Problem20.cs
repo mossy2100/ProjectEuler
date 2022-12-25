@@ -1,6 +1,6 @@
-using AstroMultimedia.Core.Numbers;
+using Galaxon.Core.Numbers;
 
-namespace AstroMultimedia.ProjectEuler;
+namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Factorial digit sum.

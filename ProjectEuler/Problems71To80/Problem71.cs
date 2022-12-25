@@ -1,6 +1,6 @@
-using AstroMultimedia.Numerics.Types;
+using Galaxon.Numerics.Types;
 
-namespace AstroMultimedia.ProjectEuler;
+namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Ordered fractions.
@@ -28,7 +28,7 @@ public static class Problem71
             }
         }
 
-        Fraction f = new (minDiffNum, minDiffDen, true);
+        BigRational f = new (minDiffNum, minDiffDen, true);
         return (long)f.Numerator;
     }
 }
