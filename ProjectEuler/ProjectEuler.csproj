@@ -27,6 +27,9 @@
       <Reference Include="Galaxon.Numerics.Types">
         <HintPath>..\..\Numerics\Types\bin\Debug\net7.0\Galaxon.Numerics.Types.dll</HintPath>
       </Reference>
+      <Reference Include="Galaxon.Numerics.Types.BigDecimal">
+        <HintPath>..\..\BigDecimal\BigDecimal\bin\Debug\net7.0\Galaxon.Numerics.Types.BigDecimal.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
     <ItemGroup>
