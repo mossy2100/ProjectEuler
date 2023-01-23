@@ -1,4 +1,4 @@
-using Galaxon.Numerics.Types;
+using Galaxon.Numerics;
 
 namespace Galaxon.ProjectEuler;
 
@@ -28,7 +28,7 @@ public static class Problem71
             }
         }
 
-        BigRational f = new (minDiffNum, minDiffDen, true);
+        BigRational f = new (minDiffNum, minDiffDen);
         return (long)f.Numerator;
     }
 }

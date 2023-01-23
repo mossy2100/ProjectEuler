@@ -1,4 +1,4 @@
-using Galaxon.Numerics.Types;
+using Galaxon.Numerics;
 
 namespace Galaxon.ProjectEuler;
 
@@ -92,7 +92,7 @@ public static class Problem33
             }
         }
 
-        BigRational f = new (nProd, dProd, true);
+        BigRational f = new (nProd, dProd);
         Console.WriteLine($"The product is {nProd}/{dProd}, which simplifies to {f.Numerator}/{f.Denominator}");
 
         return (long)f.Denominator;

@@ -1,7 +1,9 @@
+using Galaxon.Numerics.Integers;
+
 namespace Galaxon.ProjectEuler;
 
 /// <summary>
-///
+/// Non-abundant sums.
 /// <see href="https://projecteuler.net/problem=23" />
 /// </summary>
 public static class Problem23

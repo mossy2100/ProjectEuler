@@ -1,5 +1,6 @@
 using System.Numerics;
 using Galaxon.Core.Numbers;
+using Galaxon.Numerics.Integers;
 
 namespace Galaxon.ProjectEuler;
 
