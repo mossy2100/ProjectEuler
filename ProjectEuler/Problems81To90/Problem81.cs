@@ -6,8 +6,6 @@ namespace Galaxon.ProjectEuler;
 /// </summary>
 public static class Problem81
 {
-    public static long Answer()
-    {
-        return 0;
-    }
+    public static long Answer() =>
+        0;
 }

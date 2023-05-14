@@ -10,7 +10,7 @@ public static class Problem7
 {
     public static long Answer()
     {
-        List<ulong> primes = new();
+        List<ulong> primes = new ();
         ulong n = 2;
         while (primes.Count < 10001)
         {

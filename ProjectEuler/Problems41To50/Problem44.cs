@@ -14,18 +14,18 @@ public static class Problem44
         while (true)
         {
             // Get the next pentagonal number in the series.
-            ulong pj = Polygonal.GetPentagonal(j);
+            var pj = Polygonal.GetPentagonal(j);
 
             // Check the new number paired with all smaller pentagonal numbers.
             // Check in descending order to minimise the difference.
-            for (ulong k = j - 1; k >= 1; k--)
+            for (var k = j - 1; k >= 1; k--)
             {
-                ulong pk = Polygonal.GetPentagonal(k);
+                var pk = Polygonal.GetPentagonal(k);
                 // Console.WriteLine($"Comparing {pj} and {pk}");
 
                 // Calculate the sum and the difference;
-                ulong sum = pj + pk;
-                ulong diff = pj - pk;
+                var sum = pj + pk;
+                var diff = pj - pk;
                 if (Polygonal.IsPentagonal(sum) && Polygonal.IsPentagonal(diff))
                 {
                     // Found the answer.

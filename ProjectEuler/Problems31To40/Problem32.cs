@@ -10,8 +10,8 @@ public static class Problem32
 {
     public static long Answer()
     {
-        List<string> permutations = Factorials.CharPermutations("123456789");
-        List<int> products = new();
+        var permutations = Factorials.CharPermutations("123456789");
+        List<int> products = new ();
 
         // Analysis shows that, for a * b = c:
         //   * a can only have 1 or 2 digits (if we specify a < b)
@@ -19,14 +19,14 @@ public static class Problem32
         //   * all products that fir the identity must have 4 digits
 
         // Check every permutation.
-        foreach (string permutation in permutations)
+        foreach (var permutation in permutations)
         {
-            for (int aLength = 1; aLength <= 2; aLength++)
+            for (var aLength = 1; aLength <= 2; aLength++)
             {
                 // Get a, b, and c from the permutation string.
-                int a = int.Parse(permutation[..aLength]);
-                int b = int.Parse(permutation[aLength..5]);
-                int c = int.Parse(permutation[5..]);
+                var a = int.Parse(permutation[..aLength]);
+                var b = int.Parse(permutation[aLength..5]);
+                var c = int.Parse(permutation[5..]);
 
                 // Avoid the multiplication if possible.
                 // Make sure a is less than b to cut matches by half.

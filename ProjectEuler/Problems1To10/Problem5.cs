@@ -11,11 +11,11 @@ public static class Problem5
 {
     public static long Answer()
     {
-        List<ulong> factors = new();
+        List<ulong> factors = new ();
         for (ulong i = 2; i <= 20; i++)
         {
-            List<ulong> factors2 = Primes.PrimeFactors(i);
-            IEnumerable<ulong> newFactors = factors2.Diff(factors);
+            var factors2 = Primes.PrimeFactors(i);
+            var newFactors = factors2.Diff(factors);
             factors.AddRange(newFactors);
         }
         return (long)factors.Aggregate(1UL, (product, factor) => product * factor);

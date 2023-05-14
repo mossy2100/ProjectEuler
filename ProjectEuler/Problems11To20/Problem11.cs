@@ -35,31 +35,31 @@ public static class Problem11
 
     private static int[,] GetGrid()
     {
-        int[,] grid = new int[Size, Size];
-        Regex rx = new(@"\d{2}");
-        MatchCollection matches = rx.Matches(Grid);
-        int k = 0;
-        for (int i = 0; i < Size; i++)
+        var grid = new int[Size, Size];
+        Regex rx = new (@"\d{2}");
+        var matches = rx.Matches(Grid);
+        var k = 0;
+        for (var i = 0; i < Size; i++)
         {
-            for (int j = 0; j < Size; j++)
+            for (var j = 0; j < Size; j++)
             {
                 grid[i, j] = int.Parse(matches[k++].Value);
             }
         }
         return grid;
     }
-    
+
     public static long Answer()
     {
-        int[,] grid = GetGrid();
+        var grid = GetGrid();
         long max = 0;
-        
+
         // Check every position.
-        for (int i = 0; i < Size; i++)
+        for (var i = 0; i < Size; i++)
         {
-            for (int j = 0; j < Size; j++)
+            for (var j = 0; j < Size; j++)
             {
-                int a = grid[i, j];
+                var a = grid[i, j];
                 int b;
                 int c;
                 int d;
@@ -77,8 +77,10 @@ public static class Problem11
                         max = p;
                     }
                 }
-                catch (IndexOutOfRangeException) {}
-                
+                catch (IndexOutOfRangeException)
+                {
+                }
+
                 // Get the right values.
                 try
                 {
@@ -91,7 +93,9 @@ public static class Problem11
                         max = p;
                     }
                 }
-                catch (IndexOutOfRangeException) {}
+                catch (IndexOutOfRangeException)
+                {
+                }
 
                 // Get the downhill diagonal values.
                 try
@@ -105,7 +109,9 @@ public static class Problem11
                         max = p;
                     }
                 }
-                catch (IndexOutOfRangeException) {}
+                catch (IndexOutOfRangeException)
+                {
+                }
 
                 // Get the uphill diagonal values.
                 try
@@ -119,7 +125,9 @@ public static class Problem11
                         max = p;
                     }
                 }
-                catch (IndexOutOfRangeException) {}
+                catch (IndexOutOfRangeException)
+                {
+                }
             }
         }
 

@@ -6,13 +6,13 @@ namespace Galaxon.ProjectEuler;
 /// </summary>
 public static class Problem15
 {
-    private static readonly Dictionary<(int dx, int dy), long> NumPathsCache = new();
+    private static readonly Dictionary<(int dx, int dy), long> NumPathsCache = new ();
 
     private static long GetNumPaths(int x0, int y0, int x1, int y1)
     {
         // Check cache.
-        int dx = x1 - x0;
-        int dy = y1 - y0;
+        var dx = x1 - x0;
+        var dy = y1 - y0;
         if (NumPathsCache.ContainsKey((dx, dy)))
         {
             return NumPathsCache[(dx, dy)];
@@ -42,7 +42,7 @@ public static class Problem15
     public static long Answer()
     {
         const int n = 20;
-        long numPaths = GetNumPaths(0, 0, n, n);
+        var numPaths = GetNumPaths(0, 0, n, n);
         return numPaths;
     }
 }

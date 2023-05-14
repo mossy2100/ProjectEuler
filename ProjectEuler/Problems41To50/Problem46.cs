@@ -3,8 +3,7 @@ using Galaxon.Numerics.Integers;
 namespace Galaxon.ProjectEuler;
 
 /// <summary>
-///
-/// <see href="https://projecteuler.net/problem=" />
+///     <see href="https://projecteuler.net/problem=" />
 /// </summary>
 public static class Problem46
 {
@@ -20,10 +19,10 @@ public static class Problem46
             {
                 // The largest possible value for c will be √((a - 2) / 2), because the smallest
                 // prime (and thus the smallest value for b) is 2.
-                bool foundValuesThatWork = false;
+                var foundValuesThatWork = false;
                 for (ulong c = 1; c <= Sqrt((a - 2) / 2.0); c++)
                 {
-                    ulong b = a - (2 * c * c);
+                    var b = a - 2 * c * c;
                     if (Primes.IsPrime(b))
                     {
                         foundValuesThatWork = true;

@@ -10,12 +10,12 @@ public static class Problem58
 {
     public static long Answer()
     {
-        long t1 = DateTime.Now.Ticks;
+        var t1 = DateTime.Now.Ticks;
 
         // Repeatedly add layers until result found.
-        int size = 1;
-        int nNumbersOnDiagonals = 1;
-        int nPrimes = 0;
+        var size = 1;
+        var nNumbersOnDiagonals = 1;
+        var nPrimes = 0;
         ulong n = 1;
         uint diff = 0;
         while (true)
@@ -25,7 +25,7 @@ public static class Problem58
             diff += 2;
 
             // Check the values at each of the next 3 corners.
-            for (int i = 0; i < 3; i++)
+            for (var i = 0; i < 3; i++)
             {
                 n += diff;
                 if (Primes.IsPrime(n))
@@ -46,8 +46,8 @@ public static class Problem58
             }
         }
 
-        long t2 = DateTime.Now.Ticks;
-        long t = (t2 - t1) / TimeSpan.TicksPerMillisecond;
+        var t2 = DateTime.Now.Ticks;
+        var t = (t2 - t1) / TimeSpan.TicksPerMillisecond;
         Console.WriteLine($"Total execution time = {t} ms.");
 
         return size;

@@ -14,8 +14,8 @@ public static class Problem23
         const int max = 28123;
 
         // Get all abundant numbers <= max.
-        List<int> abundantNumbers = new();
-        for (int i = 1; i <= max; i++)
+        List<int> abundantNumbers = new ();
+        for (var i = 1; i <= max; i++)
         {
             if (Divisors.PerfectNumber(i) == 1)
             {
@@ -25,17 +25,17 @@ public static class Problem23
 
         // Look for numbers that cannot be written as the sum of two abundant numbers.
         long sum = 0;
-        for (int i = 1; i <= max; i++)
+        for (var i = 1; i <= max; i++)
         {
-            bool isSumOf2AbundantNums = false;
-            foreach (int a in abundantNumbers)
+            var isSumOf2AbundantNums = false;
+            foreach (var a in abundantNumbers)
             {
                 if (a > i / 2)
                 {
                     break;
                 }
 
-                int b = i - a;
+                var b = i - a;
                 if (!abundantNumbers.Contains(b))
                 {
                     continue;

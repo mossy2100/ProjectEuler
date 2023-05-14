@@ -114,9 +114,9 @@ public static class Problem13
 
     private static List<string> GetNumbers()
     {
-        Regex rx = new(@"\d{50}");
-        MatchCollection matches = rx.Matches(Numbers);
-        List<string> numbers = new();
+        Regex rx = new (@"\d{50}");
+        var matches = rx.Matches(Numbers);
+        List<string> numbers = new ();
         foreach (Match match in matches)
         {
             numbers.Add(match.Value);
@@ -126,23 +126,23 @@ public static class Problem13
 
     private static int? GetDigit(string digitString, int exponent)
     {
-        int i = digitString.Length - 1 - exponent;
+        var i = digitString.Length - 1 - exponent;
         return i < 0 ? null : int.Parse(digitString.Substring(i, 1));
     }
 
     private static string Add(string a, string b)
     {
-        StringBuilder c = new();
-        int carry = 0;
-        int i = 0;
+        StringBuilder c = new ();
+        var carry = 0;
+        var i = 0;
 
         while (true)
         {
             // Get a digit from digit string a.
-            int? aDigit = GetDigit(a, i);
-            
+            var aDigit = GetDigit(a, i);
+
             // Get a digit from digit string b.
-            int? bDigit = GetDigit(b, i);
+            var bDigit = GetDigit(b, i);
 
             // Check if we're done.
             if (aDigit == null && bDigit == null && carry == 0)
@@ -150,8 +150,8 @@ public static class Problem13
                 break;
             }
 
-            int sum = (aDigit ?? 0) + (bDigit ?? 0) + carry;
-            int cDigit = sum % 10;
+            var sum = (aDigit ?? 0) + (bDigit ?? 0) + carry;
+            var cDigit = sum % 10;
             c.Insert(0, cDigit.ToString());
             carry = sum / 10;
             i++;
@@ -162,7 +162,7 @@ public static class Problem13
 
     public static long Answer()
     {
-        string result = GetNumbers().Aggregate("", Add);
+        var result = GetNumbers().Aggregate("", Add);
         return long.Parse(result[..10]);
     }
 }

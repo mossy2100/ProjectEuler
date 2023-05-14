@@ -12,18 +12,18 @@ public static class Problem50
     {
         // Find all the primes we need for this problem.
         uint max = 1_000_000;
-        List<ulong> primes = Primes.GetPrimesUpTo(max);
+        var primes = Primes.GetPrimesUpTo(max);
 
         // Keep track of the best solution.
         uint maxNTerms = 1;
         ulong result = 0;
 
         // Consider each prime as a starting point for a sequence.
-        for (int i = 0; i < primes.Count; i++)
+        for (var i = 0; i < primes.Count; i++)
         {
             ulong sum = 0;
             uint nTerms = 0;
-            for (int j = i; j < primes.Count; j++)
+            for (var j = i; j < primes.Count; j++)
             {
                 sum += primes[j];
                 nTerms++;

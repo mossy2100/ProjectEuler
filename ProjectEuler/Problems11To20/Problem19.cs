@@ -6,8 +6,8 @@ namespace Galaxon.ProjectEuler;
 /// </summary>
 public static class Problem19
 {
-    private static bool IsLeapYear(int year) => 
-        (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+    private static bool IsLeapYear(int year) =>
+        year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
 
     private static int DaysInMonth(int year, int month) =>
         month switch
@@ -19,10 +19,10 @@ public static class Problem19
 
     public static long Answer()
     {
-        int year = 1900;
-        int month = 1;
-        int dayNumber = 1;
-        int sundayCount = 0;
+        var year = 1900;
+        var month = 1;
+        var dayNumber = 1;
+        var sundayCount = 0;
         while (true)
         {
             // Check for Sunday.

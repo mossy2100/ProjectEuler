@@ -17,18 +17,18 @@ public static class Problem75
         List<(ulong a, ulong b, ulong c)> triples = new ();
 
         // Also keep track of how many solutions we find for each length.
-        int[] count = new int[max + 1];
+        var count = new int[max + 1];
 
         // Find all the primitive Pythagorean triples up to max length, using Euclid's formula.
         // <see href="https://en.wikipedia.org/wiki/Pythagorean_triple#Generating_a_triple" />
 
         // Try values for n.
         ulong n = 1;
-        bool done = false;
+        var done = false;
         while (!done)
         {
             // Try values for m. We know m > n, and either m or n is even (not both).
-            ulong m = n + 1;
+            var m = n + 1;
 
             while (true)
             {
@@ -40,12 +40,12 @@ public static class Problem75
                 }
 
                 // Calculate a, b, c, and len.
-                ulong mSqr = m * m;
-                ulong nSqr = n * n;
-                ulong a = mSqr - nSqr;
-                ulong b = 2 * m * n;
-                ulong c = mSqr + nSqr;
-                ulong len = a + b + c;
+                var mSqr = m * m;
+                var nSqr = n * n;
+                var a = mSqr - nSqr;
+                var b = 2 * m * n;
+                var c = mSqr + nSqr;
+                var len = a + b + c;
 
                 // If perimeter is too large, stop checking values for m.
                 if (len > max)
@@ -60,7 +60,7 @@ public static class Problem75
                 }
 
                 // Check we haven't found this one already.
-                (ulong a, ulong b, ulong c) triple = (a, b, c);
+                var triple = (a, b, c);
                 if (!triples.Contains(triple))
                 {
                     // Found a primitive triple.
@@ -78,9 +78,9 @@ public static class Problem75
         }
 
         // Now we have the primitives, count up the multiples.
-        foreach ((ulong a, ulong b, ulong c) triple in triples)
+        foreach (var triple in triples)
         {
-            ulong len = triple.a + triple.b + triple.c;
+            var len = triple.a + triple.b + triple.c;
             for (ulong k = 2; k <= max / len; k++)
             {
                 count[k * len]++;

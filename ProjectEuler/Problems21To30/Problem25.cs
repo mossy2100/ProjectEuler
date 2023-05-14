@@ -12,10 +12,10 @@ public static class Problem25
     {
         BigInteger a = 1;
         BigInteger b = 1;
-        int i = 3;
+        var i = 3;
         while (true)
         {
-            BigInteger c = a + b;
+            var c = a + b;
             if (c >= BigInteger.Pow(10, 999))
             {
                 return i;

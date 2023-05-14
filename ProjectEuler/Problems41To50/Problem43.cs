@@ -11,7 +11,7 @@ public static class Problem43
     public static long Answer()
     {
         // Get all possible permutations.
-        List<string> permutations = Factorials.CharPermutations("0123456789");
+        var permutations = Factorials.CharPermutations("0123456789");
 
         // Get the first 7 primes.
         int[] primes = { 2, 3, 5, 7, 11, 13, 17 };
@@ -19,12 +19,12 @@ public static class Problem43
         long total = 0;
 
         // Test each one.
-        foreach (string perm in permutations)
+        foreach (var perm in permutations)
         {
-            bool match = true;
-            for (int i = 0; i < 7; i++)
+            var match = true;
+            for (var i = 0; i < 7; i++)
             {
-                int num = int.Parse(perm[(i + 1)..(i + 4)]);
+                var num = int.Parse(perm[(i + 1)..(i + 4)]);
                 if (num % primes[i] != 0)
                 {
                     match = false;

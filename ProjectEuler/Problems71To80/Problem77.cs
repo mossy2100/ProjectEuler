@@ -23,16 +23,16 @@ public static class Problem77
             max = n;
         }
 
-        int count = 0;
+        var count = 0;
 
         // Get primes up to the smaller of n and max.
-        List<ulong> primes = Primes.GetPrimesUpTo((ulong)Min(n, (int)max));
+        var primes = Primes.GetPrimesUpTo((ulong)Min(n, (int)max));
 
         // Let a be the first in the series of primes that form the sum.
         // It cannot be greater than max.
-        for (int i = primes.Count - 1; i >= 0; i--)
+        for (var i = primes.Count - 1; i >= 0; i--)
         {
-            int a = (int)primes[i];
+            var a = (int)primes[i];
             if (a == n)
             {
                 count++;
@@ -48,7 +48,7 @@ public static class Problem77
 
     public static long Answer()
     {
-        int n = 10;
+        var n = 10;
         while (true)
         {
             if (CountWays(n) >= 5000)

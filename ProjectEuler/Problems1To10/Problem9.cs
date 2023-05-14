@@ -8,19 +8,19 @@ public static class Problem9
 {
     private static int? IntSqrt(int n)
     {
-        double d = Sqrt(n);
-        int s = (int)d;
+        var d = Sqrt(n);
+        var s = (int)d;
         return d - s == 0 ? s : null;
     }
 
     public static long Answer()
     {
-        for (int a = 1; a < 1000; a++)
+        for (var a = 1; a < 1000; a++)
         {
-            for (int b = a + 1; b < 1000; b++)
+            for (var b = a + 1; b < 1000; b++)
             {
-                int cSqr = a * a + b * b;
-                int? c = IntSqrt(cSqr);
+                var cSqr = a * a + b * b;
+                var c = IntSqrt(cSqr);
                 if (!c.HasValue || a + b + c.Value != 1000)
                 {
                     continue;

@@ -10,18 +10,18 @@ public static class Problem68
 {
     public static bool IsValid(List<int> fiveGon)
     {
-        int sum1 = fiveGon[5] + fiveGon[0] + fiveGon[1];
-        int sum2 = fiveGon[6] + fiveGon[1] + fiveGon[2];
-        int sum3 = fiveGon[7] + fiveGon[2] + fiveGon[3];
-        int sum4 = fiveGon[8] + fiveGon[3] + fiveGon[4];
-        int sum5 = fiveGon[9] + fiveGon[4] + fiveGon[0];
+        var sum1 = fiveGon[5] + fiveGon[0] + fiveGon[1];
+        var sum2 = fiveGon[6] + fiveGon[1] + fiveGon[2];
+        var sum3 = fiveGon[7] + fiveGon[2] + fiveGon[3];
+        var sum4 = fiveGon[8] + fiveGon[3] + fiveGon[4];
+        var sum5 = fiveGon[9] + fiveGon[4] + fiveGon[0];
         return sum1 == sum2 && sum1 == sum3 && sum1 == sum4 && sum1 == sum5;
     }
 
     public static long Answer()
     {
         List<int> nums = new () { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        List<List<int>> fiveGons = Factorials.GetPermutations(nums, 10);
+        var fiveGons = Factorials.GetPermutations(nums, 10);
         long max = 0;
 
         foreach (var fiveGon in fiveGons)
@@ -29,9 +29,9 @@ public static class Problem68
             if (IsValid(fiveGon))
             {
                 // Find the numerically lowest external node.
-                int min = int.MaxValue;
-                int minPos = 0;
-                for (int i = 5; i < 10; i++)
+                var min = int.MaxValue;
+                var minPos = 0;
+                for (var i = 5; i < 10; i++)
                 {
                     if (fiveGon[i] < min)
                     {
@@ -41,15 +41,15 @@ public static class Problem68
                 }
 
                 // Count each arm, going clockwise.
-                int[][] values = new int[5][];
-                string[] triplets = new string[5];
-                string[] tripletDigits = new string[5];
-                int[] armSums = new int[5];
+                var values = new int[5][];
+                var triplets = new string[5];
+                var tripletDigits = new string[5];
+                var armSums = new int[5];
 
-                int pos = minPos;
-                for (int i = 0; i < 5; i++)
+                var pos = minPos;
+                for (var i = 0; i < 5; i++)
                 {
-                    values[i] = new []
+                    values[i] = new[]
                     {
                         fiveGon[pos],
                         fiveGon[pos - 5],
@@ -67,13 +67,13 @@ public static class Problem68
                     }
                 }
 
-                string strSolution = string.Join(" ", triplets);
-                string digits = string.Join("", tripletDigits);
+                var strSolution = string.Join(" ", triplets);
+                var digits = string.Join("", tripletDigits);
 
                 // Get the longest 16-digit number.
                 if (digits.Length == 16)
                 {
-                    long digitVal = long.Parse(digits);
+                    var digitVal = long.Parse(digits);
                     if (digitVal > max)
                     {
                         max = digitVal;

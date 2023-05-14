@@ -10,12 +10,12 @@ public static class Problem17
 {
     public static void Test()
     {
-        Random rand = new();
-        for (int i = 0; i < 100; i++)
+        Random rand = new ();
+        for (var i = 0; i < 100; i++)
         {
-            uint n = (uint)rand.Next();
-            string words = NumberStrings.NumberToWords(n);
-            int letterCount = NumberStrings.LetterCount(words);
+            var n = (uint)rand.Next();
+            var words = NumberStrings.NumberToWords(n);
+            var letterCount = NumberStrings.LetterCount(words);
             Console.WriteLine($"{n} = {words} ({letterCount} letters).");
         }
     }

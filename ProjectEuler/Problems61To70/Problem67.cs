@@ -6,18 +6,18 @@ namespace Galaxon.ProjectEuler;
 /// </summary>
 public static class Problem67
 {
-    private static int[][]? Triangle = new int[100][];
+    private static readonly int[][]? Triangle = new int[100][];
 
     private static void GetTriangle()
     {
-        string path = Utility.GetDataFilePath("p067_triangle.txt");
-        string[] rows = File.ReadAllLines(path);
-        for (int r = 0; r < 100; r++)
+        var path = Utility.GetDataFilePath("p067_triangle.txt");
+        var rows = File.ReadAllLines(path);
+        for (var r = 0; r < 100; r++)
         {
-            string row = rows[r];
-            string[] strValues = row.Trim().Split(" ");
-            int[] intValues = new int[strValues.Length];
-            for (int c = 0; c < strValues.Length; c++)
+            var row = rows[r];
+            var strValues = row.Trim().Split(" ");
+            var intValues = new int[strValues.Length];
+            for (var c = 0; c < strValues.Length; c++)
             {
                 intValues[c] = int.Parse(strValues[c]);
             }
@@ -29,14 +29,14 @@ public static class Problem67
     {
         GetTriangle();
 
-        int[][] MaxPathSum = new int[100][];
+        var MaxPathSum = new int[100][];
 
-        for (int row = 99; row >= 0; row--)
+        for (var row = 99; row >= 0; row--)
         {
-            int len = row + 1;
+            var len = row + 1;
             MaxPathSum[row] = new int[len];
 
-            for (int col = 0; col < len; col++)
+            for (var col = 0; col < len; col++)
             {
                 MaxPathSum[row][col] = Triangle![row][col];
                 if (row < 99)

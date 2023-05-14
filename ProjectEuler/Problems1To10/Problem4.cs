@@ -11,12 +11,12 @@ public static class Problem4
 {
     public static int Answer()
     {
-        int max = 0;
-        for (int i = 111; i <= 999; i++)
+        var max = 0;
+        for (var i = 111; i <= 999; i++)
         {
-            for (int j = 111; j <= 999; j++)
+            for (var j = 111; j <= 999; j++)
             {
-                int k = i * j;
+                var k = i * j;
                 if (((BigInteger)k).IsPalindromic() && k > max)
                 {
                     max = k;

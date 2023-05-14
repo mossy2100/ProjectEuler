@@ -8,13 +8,13 @@ namespace Galaxon.ProjectEuler;
 /// </summary>
 public static class Problem40
 {
-    private static int GetDigit(StringBuilder sDigits, int index) => 
+    private static int GetDigit(StringBuilder sDigits, int index) =>
         int.Parse(sDigits[index].ToString());
 
     public static long Answer()
     {
-        StringBuilder sbDigits = new();
-        int n = 0;
+        StringBuilder sbDigits = new ();
+        var n = 0;
         while (sbDigits.Length <= 1000000)
         {
             sbDigits.Append(n);

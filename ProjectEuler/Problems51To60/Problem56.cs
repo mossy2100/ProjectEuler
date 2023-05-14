@@ -14,10 +14,10 @@ public static class Problem56
         BigInteger maxDigitSum = 0;
         for (BigInteger a = 1; a < 100; a++)
         {
-            for (int b = 1; b < 100; b++)
+            for (var b = 1; b < 100; b++)
             {
-                BigInteger c = BigInteger.Pow(a, b);
-                BigInteger digitSum = c.DigitSum();
+                var c = BigInteger.Pow(a, b);
+                var digitSum = c.DigitSum();
                 if (digitSum > maxDigitSum)
                 {
                     maxDigitSum = digitSum;

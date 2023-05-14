@@ -10,7 +10,7 @@ public static class Problem24
 {
     public static long Answer()
     {
-        List<string> permutations = Factorials.CharPermutations("0123456789");
+        var permutations = Factorials.CharPermutations("0123456789");
         return long.Parse(permutations[999999]);
     }
 }

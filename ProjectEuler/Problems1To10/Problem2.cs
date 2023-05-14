@@ -8,13 +8,13 @@ public static class Problem2
 {
     public static long Answer()
     {
-        int a = 0;
-        int b = 1;
-        int sum = 0;
+        var a = 0;
+        var b = 1;
+        var sum = 0;
         while (true)
         {
             // Get the next number.
-            int c = a + b;
+            var c = a + b;
 
             // Check if we're done.
             if (c > 4000000)
@@ -27,7 +27,7 @@ public static class Problem2
             {
                 sum += c;
             }
-            
+
             // Prepare for the next loop iteration.
             a = b;
             b = c;

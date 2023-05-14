@@ -8,8 +8,6 @@ namespace Galaxon.ProjectEuler;
 /// </summary>
 public static class Problem76
 {
-    public static long Answer()
-    {
-        return (long)Partitions.P(100) - 1;
-    }
+    public static long Answer() =>
+        (long)Partitions.P(100) - 1;
 }

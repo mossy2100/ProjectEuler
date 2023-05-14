@@ -11,8 +11,8 @@ public static class Problem74
 {
     public static long Answer()
     {
-        int count = 0;
-        for (int i = 0; i <= 1_000_000; i++)
+        var count = 0;
+        for (var i = 0; i <= 1_000_000; i++)
         {
             List<BigInteger> chain = new ();
             BigInteger n = i;
@@ -30,7 +30,7 @@ public static class Problem74
                 // Console.Write($"{n} -> ");
             }
 
-            int chainLength = chain.Count;
+            var chainLength = chain.Count;
             // Console.WriteLine();
             // Console.WriteLine($"Starting with {i} produces a chain of {chainLength} non-repeating terms.");
             // Console.WriteLine();

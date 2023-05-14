@@ -31,20 +31,21 @@ public static class Problem8
         71636269561882670428252483600823257530420752963450
         """;
 
-    private static string GetDigits() => string.Join("", Digits.Where(char.IsDigit));
+    private static string GetDigits() =>
+        string.Join("", Digits.Where(char.IsDigit));
 
     public static long Answer()
     {
-        string digits = GetDigits();
+        var digits = GetDigits();
         long maxProduct = 0;
         // string maxProductChars = ""; 
-        for (int i = 0; i <= digits.Length - 13; i++)
+        for (var i = 0; i <= digits.Length - 13; i++)
         {
             long product = 1;
-            StringBuilder productChars = new();
-            for (int j = 0; j < 13; j++)
+            StringBuilder productChars = new ();
+            for (var j = 0; j < 13; j++)
             {
-                char c = digits[i + j];
+                var c = digits[i + j];
                 productChars.Append(c);
                 product *= long.Parse(c.ToString());
             }

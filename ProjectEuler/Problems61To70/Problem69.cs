@@ -15,8 +15,8 @@ public static class Problem69
 
         for (ulong n = 2; n <= 1_000_000; n++)
         {
-            ulong phi = Primes.Totient(n);
-            double nOnPhi = (double)n / phi;
+            var phi = Primes.Totient(n);
+            var nOnPhi = (double)n / phi;
             Console.WriteLine($"Totient({n}) = {phi} => n/phi(n) = {nOnPhi:G5}");
 
             if (nOnPhi > max)

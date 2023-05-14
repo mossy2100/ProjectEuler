@@ -15,7 +15,7 @@ public static class Problem21
     public static long Answer()
     {
         // Use a HashSet to avoid duplicates.
-        List<long> amicable = new();
+        List<long> amicable = new ();
 
         // Check them all.
         for (long a = 2; a < 10000; a++)
@@ -27,7 +27,7 @@ public static class Problem21
             }
 
             // Find b.
-            long b = D(a);
+            var b = D(a);
 
             // See if a and b are an amicable pair.
             if (a != b && D(b) == a)

@@ -11,11 +11,11 @@ public static class Problem57
 {
     public static long Answer()
     {
-        int count = 0;
-        BigRational f = 1 + new BigRational(1, 2);
-        for (int i = 0; i < 1000; i++)
+        var count = 0;
+        var f = 1 + new BigRational(1, 2);
+        for (var i = 0; i < 1000; i++)
         {
-            f = 1 + (1 / (f + 1));
+            f = 1 + 1 / (f + 1);
             if (Digits.NumDigits(f.Numerator) > Digits.NumDigits(f.Denominator))
             {
                 count++;

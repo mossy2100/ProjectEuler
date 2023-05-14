@@ -14,16 +14,16 @@ public static class Problem38
         long largest = 0;
 
         // The multiplicand must have a maximum of 4 digits because the concatenated product has 9.
-        for (int x = 1; x < 10000; x++)
+        for (var x = 1; x < 10000; x++)
         {
-            StringBuilder sbDigits = new("");
-            int n = 1;
+            StringBuilder sbDigits = new ("");
+            var n = 1;
             while (true)
             {
                 sbDigits.Append((x * n).ToString());
                 if (n > 1 && sbDigits.Length == 9)
                 {
-                    string strDigits = sbDigits.ToString();
+                    var strDigits = sbDigits.ToString();
                     if (Digits.IsPandigital(strDigits))
                     {
                         long concatenatedProduct = int.Parse(strDigits);

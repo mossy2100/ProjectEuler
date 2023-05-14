@@ -12,7 +12,7 @@ public static class Problem3
     {
         for (ulong i = 1; i <= 100; i++)
         {
-            string factors = $"[{string.Join(", ", Primes.PrimeFactors(i))}]";
+            var factors = $"[{string.Join(", ", Primes.PrimeFactors(i))}]";
             Console.WriteLine($"The prime factors of {i} are {factors}.");
             if (Primes.IsPrime(i))
             {
@@ -21,5 +21,6 @@ public static class Problem3
         }
     }
 
-    public static long Answer() => (long)Primes.PrimeFactors(600851475143).Last();
+    public static long Answer() =>
+        (long)Primes.PrimeFactors(600851475143).Last();
 }

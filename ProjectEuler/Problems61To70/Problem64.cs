@@ -10,12 +10,12 @@ public static class Problem64
 {
     public static long Answer()
     {
-        int count = 0;
-        for (int a = 2; a <= 10000; a++)
+        var count = 0;
+        for (var a = 2; a <= 10000; a++)
         {
-            double s = Sqrt(a);
-            int b = (int)Floor(s);
-            double r = s - b;
+            var s = Sqrt(a);
+            var b = (int)Floor(s);
+            var r = s - b;
 
             // Skip perfect squares.
             if (r.FuzzyEquals(0))
@@ -31,8 +31,8 @@ public static class Problem64
             List<(int value, string strFrac)> seq = new ();
             while (true)
             {
-                int e = frac.Invert();
-                string strFrac = frac.ToString();
+                var e = frac.Invert();
+                var strFrac = frac.ToString();
 
                 if (seq.Any(tup => tup.strFrac == strFrac))
                 {
@@ -49,8 +49,9 @@ public static class Problem64
             }
 
             // Feedback for testing.
-            List<int> intSequence = seq.Select(tup => tup.value).ToList();
-            Console.WriteLine($"The sequence for Sqrt({a}) is [{b}; ({string.Join(", ", intSequence)})], period = {seq.Count}");
+            var intSequence = seq.Select(tup => tup.value).ToList();
+            Console.WriteLine(
+                $"The sequence for Sqrt({a}) is [{b}; ({string.Join(", ", intSequence)})], period = {seq.Count}");
         }
 
         return count;
@@ -75,8 +76,8 @@ public class Problem64Fraction
 
     public int Invert()
     {
-        int d = A - (B * B);
-        int e = (int)Floor(C * (Sqrt(A) + B) / d);
+        var d = A - B * B;
+        var e = (int)Floor(C * (Sqrt(A) + B) / d);
         d /= C;
         B = e * d - B;
         C = d;

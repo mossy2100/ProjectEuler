@@ -11,13 +11,13 @@ public static class Problem55
 {
     public static long Answer()
     {
-        int count = 0;
+        var count = 0;
         const int MAX_ITERATIONS = 50;
         for (ulong i = 1; i < 10000; i++)
         {
             BigInteger sum = i;
-            bool isPalindromic = false;
-            for (int j = 0; j < MAX_ITERATIONS; j++)
+            var isPalindromic = false;
+            for (var j = 0; j < MAX_ITERATIONS; j++)
             {
                 sum += sum.Reverse();
                 if (sum.IsPalindromic())

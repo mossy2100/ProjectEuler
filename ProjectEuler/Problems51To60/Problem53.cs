@@ -1,4 +1,3 @@
-using System.Numerics;
 using Galaxon.Numerics.Integers;
 
 namespace Galaxon.ProjectEuler;
@@ -11,12 +10,12 @@ public static class Problem53
 {
     public static long Answer()
     {
-        int count = 0;
-        for (int n = 1; n <= 100; n++)
+        var count = 0;
+        for (var n = 1; n <= 100; n++)
         {
-            for (int r = 1; r < n; r++)
+            for (var r = 1; r < n; r++)
             {
-                BigInteger c = Factorials.NumCombinations(n, r);
+                var c = Factorials.NumCombinations(n, r);
                 if (c > 1000000)
                 {
                     count++;

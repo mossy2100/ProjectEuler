@@ -11,7 +11,7 @@ public static class Problem37
     public static long Answer()
     {
         ulong sum = 0;
-        List<ulong> values = new();
+        List<ulong> values = new ();
 
         // Start at 10 to skip single-digit matches.
         ulong n = 10;
@@ -26,12 +26,12 @@ public static class Problem37
             }
 
             // Check if it's both left- and right-truncatable.
-            string nStr = n.ToString();
-            bool passes = true;
-            for (int j = 1; j < nStr.Length; j++)
+            var nStr = n.ToString();
+            var passes = true;
+            for (var j = 1; j < nStr.Length; j++)
             {
-                ulong left = ulong.Parse(nStr[..^j]);
-                ulong right = ulong.Parse(nStr[j..]);
+                var left = ulong.Parse(nStr[..^j]);
+                var right = ulong.Parse(nStr[j..]);
                 if (!Primes.IsPrime(left) || !Primes.IsPrime(right))
                 {
                     passes = false;

@@ -9,15 +9,15 @@ namespace Galaxon.ProjectEuler;
 public static class Problem65
 {
     public static int ESequence(int index) =>
-        (index % 3 is 0 or 2) ? 1 : (2 * (index / 3 + 1));
+        index % 3 is 0 or 2 ? 1 : 2 * (index / 3 + 1);
 
     public static long Answer()
     {
-        int n = 100;
+        var n = 100;
         BigRational f = ESequence(n - 2);
-        for (int m = n - 2; m >= 0; m--)
+        for (var m = n - 2; m >= 0; m--)
         {
-            int prevTerm = (m == 0) ? 0 : ESequence(m - 1);
+            var prevTerm = m == 0 ? 0 : ESequence(m - 1);
             f = prevTerm + ~f;
         }
         f += 2;

@@ -11,21 +11,21 @@ public static class Problem27
     public static long Answer()
     {
         // Keep track of how many consecutive primes we find for each combination of a and b.
-        int maxCount = 0;
-        int maxA = 0;
-        int maxB = 0;
+        var maxCount = 0;
+        var maxA = 0;
+        var maxB = 0;
 
         // Loop through all combinations of a and b.
-        for (int a = -999; a <= 999; a++)
+        for (var a = -999; a <= 999; a++)
         {
-            for (int b = -1000; b <= 1000; b++)
+            for (var b = -1000; b <= 1000; b++)
             {
-                int count = 0;
-                int n = 0;
+                var count = 0;
+                var n = 0;
 
                 while (true)
                 {
-                    long q = (n * n) + (a * n) + b;
+                    long q = n * n + a * n + b;
                     if (q >= 0 && Primes.IsPrime((ulong)q))
                     {
                         count++;

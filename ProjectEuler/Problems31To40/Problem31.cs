@@ -10,16 +10,16 @@ public static class Problem31
 
     private static List<CoinSet> GetCoinSets(int total, CoinSet? coinsSoFar = null)
     {
-        List<CoinSet> result = new();
+        List<CoinSet> result = new ();
 
         // Initialise the set of coins if necessary.
         coinsSoFar ??= new CoinSet();
 
         // Get the max value of the coins we want to consider for the next in the set.
-        int max = coinsSoFar.Smallest ?? Coins[^1];
+        var max = coinsSoFar.Smallest ?? Coins[^1];
 
         // Consider possible next coins from largest to smallest.
-        foreach (int coin in Coins.Reverse())
+        foreach (var coin in Coins.Reverse())
         {
             if (coin > total || coin > max)
             {
@@ -27,13 +27,13 @@ public static class Problem31
             }
 
             // Clone the given coin set.
-            CoinSet newCoinSet = new(coinsSoFar);
+            CoinSet newCoinSet = new (coinsSoFar);
 
             // Add the new coin.
             newCoinSet.Add(coin);
 
             // Calculate the remainder.
-            int rem = total - coin;
+            var rem = total - coin;
 
             // Are we done?
             if (rem == 0)
@@ -53,10 +53,10 @@ public static class Problem31
 
     public static long Answer()
     {
-        List<CoinSet> coinSets = GetCoinSets(200);
+        var coinSets = GetCoinSets(200);
 
         // DEBUG.
-        foreach (CoinSet coinSet in coinSets)
+        foreach (var coinSet in coinSets)
         {
             coinSet.Print();
         }
@@ -67,13 +67,13 @@ public static class Problem31
 
 public class CoinSet
 {
-    private readonly Dictionary<int, int> coins = new();
+    private readonly Dictionary<int, int> coins = new ();
 
     public CoinSet()
     {
     }
 
-    public CoinSet(CoinSet coinSetToClone) => 
+    public CoinSet(CoinSet coinSetToClone) =>
         coins = new Dictionary<int, int>(coinSetToClone.coins);
 
     public int? Smallest
@@ -85,9 +85,9 @@ public class CoinSet
                 return null;
             }
             int? smallest = null;
-            foreach (KeyValuePair<int, int> pair in coins)
+            foreach (var pair in coins)
             {
-                if (smallest == null || (pair.Key < smallest && pair.Value > 0))
+                if (smallest == null || pair.Key < smallest && pair.Value > 0)
                 {
                     smallest = pair.Key;
                 }
@@ -107,9 +107,10 @@ public class CoinSet
 
     private static string CoinToString(KeyValuePair<int, int> coin)
     {
-        string d = coin.Key >= 100 ? $"£{coin.Key / 100}" : $"{coin.Key}p";
+        var d = coin.Key >= 100 ? $"£{coin.Key / 100}" : $"{coin.Key}p";
         return $"{coin.Value}x{d}";
     }
 
-    public void Print() => Console.WriteLine(string.Join(", ", coins.Select(CoinToString)));
+    public void Print() =>
+        Console.WriteLine(string.Join(", ", coins.Select(CoinToString)));
 }

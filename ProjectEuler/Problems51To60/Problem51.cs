@@ -15,34 +15,34 @@ public static class Problem51
 
         // Start with 5-digit numbers since the problem tells us the smallest prime that produces a
         // family of 7 has 5 digits.
-        int nDigits = 5;
+        var nDigits = 5;
 
         while (true)
         {
             // Get max value with this many digits.
-            uint max = (uint)Pow(10, nDigits) - 1;
+            var max = (uint)Pow(10, nDigits) - 1;
 
             // Get all primes up to this value.
-            List<ulong> primes = Primes.GetPrimesUpTo(max);
+            var primes = Primes.GetPrimesUpTo(max);
 
             // Check each number in this group looking for a match.
             foreach (long num in primes)
             {
                 // Get the number as a string.
-                string sNum = num.ToString().PadLeft(nDigits, '0');
+                var sNum = num.ToString().PadLeft(nDigits, '0');
 
                 // Get the set of distinct digits in this number, which we can replace.
-                char[] cDigits = sNum.Distinct().ToArray();
+                var cDigits = sNum.Distinct().ToArray();
 
                 // Try replacing each one.
-                foreach (char c in cDigits)
+                foreach (var c in cDigits)
                 {
                     // Create the set of numbers to compare.
-                    List<ulong> group = new();
-                    for (char d = '0'; d <= '9'; d++)
+                    List<ulong> group = new ();
+                    for (var d = '0'; d <= '9'; d++)
                     {
-                        string sNewNum = sNum.Replace(c, d);
-                        ulong newNum = ulong.Parse(sNewNum);
+                        var sNewNum = sNum.Replace(c, d);
+                        var newNum = ulong.Parse(sNewNum);
                         if (Digits.NumDigits(newNum) == nDigits && Primes.IsPrime(newNum))
                         {
                             group.Add(newNum);
@@ -59,7 +59,6 @@ public static class Problem51
 
             // Increment number of digits.
             nDigits++;
-
         } // while
     } // method
 }

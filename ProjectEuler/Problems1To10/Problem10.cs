@@ -9,6 +9,5 @@ namespace Galaxon.ProjectEuler;
 public static class Problem10
 {
     public static long Answer() =>
-        (long)Primes.GetPrimesUpTo(2_000_000)
-            .Aggregate(0UL, (sum, item) => sum + item);
+        (long)Primes.GetPrimesUpTo(2_000_000).Aggregate(0UL, (sum, item) => sum + item);
 }

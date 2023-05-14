@@ -19,16 +19,16 @@ public static class Problem79
     public static long Answer()
     {
         // Get the codes.
-        string path = Utility.GetDataFilePath("p079_keylog.txt");
-        string[] codes = File.ReadAllLines(path);
+        var path = Utility.GetDataFilePath("p079_keylog.txt");
+        var codes = File.ReadAllLines(path);
 
         // Take note of what digits come after what digits.
-        foreach (string code in codes)
+        foreach (var code in codes)
         {
             // Get the code digits.
-            byte digit0 = (byte)(code[0] - '0');
-            byte digit1 = (byte)(code[1] - '0');
-            byte digit2 = (byte)(code[2] - '0');
+            var digit0 = (byte)(code[0] - '0');
+            var digit1 = (byte)(code[1] - '0');
+            var digit2 = (byte)(code[2] - '0');
 
             // Ensure each digit we find is in the dictionary.
             EnsureSetExists(digit0);

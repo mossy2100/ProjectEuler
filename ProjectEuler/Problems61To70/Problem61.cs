@@ -21,22 +21,22 @@ public static class Problem61
         List<Problem61State> nextStates = new ();
 
         // Test for each side length.
-        for (int s = 3; s <= 8; s++)
+        for (var s = 3; s <= 8; s++)
         {
             // Only test for the side lengths we haven't found a match for yet.
             if (currentState.ResultSoFar[s - 3] == 0)
             {
                 // Generate the 4-digit number.
-                int x0 = currentState.TwoDigitNums[currentState.Iteration];
-                int x = x0 * 100 + x1;
+                var x0 = currentState.TwoDigitNums[currentState.Iteration];
+                var x = x0 * 100 + x1;
 
                 // Check if it's polygonal.
-                bool isPolygonal = Polygonal.IsPolygonal(s, (ulong)x);
+                var isPolygonal = Polygonal.IsPolygonal(s, (ulong)x);
 
                 // If so, construct the new problem state and add it to the results.
                 if (isPolygonal)
                 {
-                    Problem61State state = currentState.Clone();
+                    var state = currentState.Clone();
                     state.ResultSoFar[s - 3] = x;
                     state.Iteration = currentState.Iteration + 1;
                     state.TwoDigitNums[state.Iteration] = x1;
@@ -53,7 +53,7 @@ public static class Problem61
     {
         // Create initial states, one for each possible starting number, from 11..99.
         List<Problem61State> newResults = new ();
-        for (int x0 = _Min; x0 <= _Max; x0++)
+        for (var x0 = _Min; x0 <= _Max; x0++)
         {
             Problem61State state = new ()
             {
@@ -64,15 +64,15 @@ public static class Problem61
 
         // Run 6 iterations of testing for valid future problem states.
         List<Problem61State> results;
-        for (int i = 0; i < 6; i++)
+        for (var i = 0; i < 6; i++)
         {
             results = newResults.ToList();
             newResults = new List<Problem61State>();
-            foreach (Problem61State result in results)
+            foreach (var result in results)
             {
-                for (int x1 = _Min; x1 <= _Max; x1++)
+                for (var x1 = _Min; x1 <= _Max; x1++)
                 {
-                    List<Problem61State> states = FindNextStates(result, x1);
+                    var states = FindNextStates(result, x1);
                     newResults.AddRange(states);
                 }
             }

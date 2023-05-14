@@ -16,11 +16,11 @@ public static class Problem47
 
         while (true)
         {
-            bool match = true;
+            var match = true;
 
             for (byte i = 0; i < 4; i++)
             {
-                int p = Primes.NumDistinctPrimeFactors(n + i);
+                var p = Primes.NumDistinctPrimeFactors(n + i);
                 if (p != 4)
                 {
                     match = false;

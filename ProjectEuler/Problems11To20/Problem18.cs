@@ -26,18 +26,18 @@ public static class Problem18
 
     private static int[][]? Triangle;
 
-    private static readonly Dictionary<(int r, int c), int> MaxPathSumCache = new();
+    private static readonly Dictionary<(int r, int c), int> MaxPathSumCache = new ();
 
     private static void GetTriangle()
     {
-        string[] rows = TriangleAsString.Trim().Split("\n");
+        var rows = TriangleAsString.Trim().Split("\n");
         Triangle = new int[rows.Length][];
-        for (int r = 0; r < rows.Length; r++)
+        for (var r = 0; r < rows.Length; r++)
         {
-            string row = rows[r];
-            string[] strValues = row.Trim().Split(" ");
-            int[] intValues = new int[strValues.Length];
-            for (int c = 0; c < strValues.Length; c++)
+            var row = rows[r];
+            var strValues = row.Trim().Split(" ");
+            var intValues = new int[strValues.Length];
+            for (var c = 0; c < strValues.Length; c++)
             {
                 intValues[c] = int.Parse(strValues[c]);
             }
@@ -53,7 +53,7 @@ public static class Problem18
             return MaxPathSumCache[(r, c)];
         }
 
-        int current = Triangle![r][c];
+        var current = Triangle![r][c];
         int result;
         if (r == Triangle.Length - 1)
         {
@@ -61,8 +61,8 @@ public static class Problem18
         }
         else
         {
-            int option1 = current + MaxPathSum(r + 1, c);
-            int option2 = current + MaxPathSum(r + 1, c + 1);
+            var option1 = current + MaxPathSum(r + 1, c);
+            var option2 = current + MaxPathSum(r + 1, c + 1);
             result = Max(option1, option2);
         }
 

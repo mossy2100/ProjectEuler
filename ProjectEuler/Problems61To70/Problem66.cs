@@ -13,10 +13,10 @@ public static class Problem66
     public static long Answer()
     {
         BigInteger largestX = 0;
-        int DForLargestX = 0;
-        int min = 2;
-        int max = 1000;
-        for (int D = min; D <= max; D++)
+        var DForLargestX = 0;
+        var min = 2;
+        var max = 1000;
+        for (var D = min; D <= max; D++)
         {
             Console.WriteLine();
             Console.WriteLine($"D = {D}:");
@@ -28,7 +28,7 @@ public static class Problem66
                 continue;
             }
 
-            (BigInteger x, BigInteger y) = Pell.Solve(D);
+            (var x, var y) = Pell.Solve(D);
             Console.WriteLine($"{x:N0}² - {D}×{y:N0}² = 1");
 
             if (x > largestX)
