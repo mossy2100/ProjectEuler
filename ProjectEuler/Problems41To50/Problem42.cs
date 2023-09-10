@@ -27,6 +27,6 @@ public static class Problem42
 
         // Count the number of words with a value that is a triangle number.
         return words.Select(NumberStrings.GetAlphabeticalValue)
-            .Count(value => triangularNums.ContainsValue((ulong)value));
+            .Count(value => Array.Exists(triangularNums, n => n == (ulong)value));
     }
 }
