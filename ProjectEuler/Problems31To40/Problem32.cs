@@ -4,13 +4,13 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Pandigital products.
-/// <see href="https://projecteuler.net/problem=32" />
+/// <see href="https://projecteuler.net/problem=32"/>
 /// </summary>
 public static class Problem32
 {
     public static long Answer()
     {
-        var permutations = Factorials.CharPermutations("123456789");
+        List<string> permutations = Combinatorial.CharPermutations("123456789");
         List<int> products = new ();
 
         // Analysis shows that, for a * b = c:
@@ -19,7 +19,7 @@ public static class Problem32
         //   * all products that fir the identity must have 4 digits
 
         // Check every permutation.
-        foreach (var permutation in permutations)
+        foreach (string permutation in permutations)
         {
             for (var aLength = 1; aLength <= 2; aLength++)
             {

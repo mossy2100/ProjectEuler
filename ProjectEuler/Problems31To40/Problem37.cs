@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Truncatable primes.
-/// <see href="https://projecteuler.net/problem=37" />
+/// <see href="https://projecteuler.net/problem=37"/>
 /// </summary>
 public static class Problem37
 {

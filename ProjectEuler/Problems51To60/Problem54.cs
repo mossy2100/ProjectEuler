@@ -5,7 +5,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Poker hands.
-/// <see href="https://projecteuler.net/problem=54" />
+/// <see href="https://projecteuler.net/problem=54"/>
 /// </summary>
 public static class Problem54
 {
@@ -62,7 +62,7 @@ public static class Problem54
             var matches = true;
 
             // Test the next 3 cards against the start card.
-            for (var j = i + 1; j <= i + 3; j++)
+            for (int j = i + 1; j <= i + 3; j++)
             {
                 if (hand[j].Value != hand[i].Value)
                 {
@@ -90,8 +90,10 @@ public static class Problem54
     private static bool IsFullHouse(Card[] hand, out dynamic? info)
     {
         // Check for 3, 2.
-        if (hand[0].Value == hand[1].Value && hand[1].Value == hand[2].Value
-            && hand[2].Value != hand[3].Value && hand[3].Value == hand[4].Value)
+        if (hand[0].Value == hand[1].Value
+            && hand[1].Value == hand[2].Value
+            && hand[2].Value != hand[3].Value
+            && hand[3].Value == hand[4].Value)
         {
             info = new
             {
@@ -102,8 +104,10 @@ public static class Problem54
         }
 
         // Check for 2, 3.
-        if (hand[0].Value == hand[1].Value && hand[1].Value != hand[2].Value
-            && hand[2].Value == hand[3].Value && hand[3].Value == hand[4].Value)
+        if (hand[0].Value == hand[1].Value
+            && hand[1].Value != hand[2].Value
+            && hand[2].Value == hand[3].Value
+            && hand[3].Value == hand[4].Value)
         {
             info = new
             {
@@ -158,7 +162,7 @@ public static class Problem54
             var matches = true;
 
             // Test the next 2 cards against the start card.
-            for (var j = i + 1; j <= i + 2; j++)
+            for (int j = i + 1; j <= i + 2; j++)
             {
                 if (hand[j].Value != hand[i].Value)
                 {
@@ -196,8 +200,10 @@ public static class Problem54
     private static bool IsTwoPairs(Card[] hand, out dynamic? info)
     {
         // Check for 2, 2, 1.
-        if (hand[0].Value == hand[1].Value && hand[1].Value != hand[2].Value
-            && hand[2].Value == hand[3].Value && hand[3].Value != hand[4].Value)
+        if (hand[0].Value == hand[1].Value
+            && hand[1].Value != hand[2].Value
+            && hand[2].Value == hand[3].Value
+            && hand[3].Value != hand[4].Value)
         {
             info = new
             {
@@ -209,8 +215,10 @@ public static class Problem54
         }
 
         // Check for 2, 1, 2.
-        if (hand[0].Value == hand[1].Value && hand[1].Value != hand[2].Value
-            && hand[2].Value != hand[3].Value && hand[3].Value == hand[4].Value)
+        if (hand[0].Value == hand[1].Value
+            && hand[1].Value != hand[2].Value
+            && hand[2].Value != hand[3].Value
+            && hand[3].Value == hand[4].Value)
         {
             info = new
             {
@@ -222,8 +230,10 @@ public static class Problem54
         }
 
         // Check for 1, 2, 2.
-        if (hand[0].Value != hand[1].Value && hand[1].Value == hand[2].Value
-            && hand[2].Value != hand[3].Value && hand[3].Value == hand[4].Value)
+        if (hand[0].Value != hand[1].Value
+            && hand[1].Value == hand[2].Value
+            && hand[2].Value != hand[3].Value
+            && hand[3].Value == hand[4].Value)
         {
             info = new
             {
@@ -286,8 +296,8 @@ public static class Problem54
 
     private static void PrintCard(Card card)
     {
-        var originalBackgroundColor = Console.BackgroundColor;
-        var originalForegroundColor = Console.ForegroundColor;
+        ConsoleColor originalBackgroundColor = Console.BackgroundColor;
+        ConsoleColor originalForegroundColor = Console.ForegroundColor;
 
         // Set the card colours.
         Console.BackgroundColor = ConsoleColor.White;
@@ -305,7 +315,7 @@ public static class Problem54
 
     private static void PrintHand(IEnumerable<Card> hand)
     {
-        foreach (var card in hand)
+        foreach (Card card in hand)
         {
             Console.Write(' ');
             PrintCard(card);
@@ -407,8 +417,8 @@ public static class Problem54
     public static long Answer()
     {
         // Load the hands.
-        var dataFilePath = Utility.GetDataFilePath("p054_poker.txt");
-        var games = File.ReadAllLines(dataFilePath);
+        string dataFilePath = Utility.GetDataFilePath("p054_poker.txt");
+        string[] games = File.ReadAllLines(dataFilePath);
 
         // Create the hand comparer.
         HandComparer comparer = new ();
@@ -417,15 +427,15 @@ public static class Problem54
         var count = 0;
 
         // Check each game.
-        foreach (var game in games)
+        foreach (string game in games)
         {
             Console.WriteLine();
-            var cards = game.Split(' ');
-            var player1Hand = SortCards(ConstructHand(cards[..5]));
-            var player2Hand = SortCards(ConstructHand(cards[5..]));
+            string[] cards = game.Split(' ');
+            Card[] player1Hand = SortCards(ConstructHand(cards[..5]));
+            Card[] player2Hand = SortCards(ConstructHand(cards[5..]));
             PrintPlayerHand(1, player1Hand);
             PrintPlayerHand(2, player2Hand);
-            var result = comparer.Compare(player1Hand, player2Hand);
+            int result = comparer.Compare(player1Hand, player2Hand);
             switch (result)
             {
                 case 1:
@@ -448,28 +458,41 @@ public static class Problem54
     private enum Suit
     {
         Clubs,
+
         Diamonds,
+
         Hearts,
+
         Spades
     }
 
     private enum Rank
     {
         HighCard,
+
         OnePair,
+
         TwoPairs,
+
         ThreeOfAKind,
+
         Straight,
+
         Flush,
+
         FullHouse,
+
         FourOfAKind,
+
         StraightFlush,
+
         RoyalFlush
     }
 
     private struct Card
     {
         public readonly byte Value;
+
         public readonly Suit Suit;
 
         public Card(string card)
@@ -500,7 +523,7 @@ public static class Problem54
             StringBuilder sb = new ();
 
             // Generate the value part.
-            var value = Value switch
+            string value = Value switch
             {
                 14 => "A",
                 13 => "K",
@@ -512,7 +535,7 @@ public static class Problem54
             sb.Append(value);
 
             // Generate the suit part.
-            var suit = Suit switch
+            string suit = Suit switch
             {
                 Suit.Clubs => "\u2663",
                 Suit.Diamonds => "\u2666",
@@ -571,8 +594,8 @@ public static class Problem54
             }
 
             // Compare ranks.
-            var rank1 = GetHandRank(hand1, out var info1);
-            var rank2 = GetHandRank(hand2, out var info2);
+            Rank rank1 = GetHandRank(hand1, out dynamic? info1);
+            Rank rank2 = GetHandRank(hand2, out dynamic? info2);
             if (rank1 < rank2)
             {
                 return -1;
@@ -716,7 +739,7 @@ public static class Problem54
             }
 
             // Compare each card from highest value to lowest.
-            for (var i = hand1.Length - 1; i >= 0; i--)
+            for (int i = hand1.Length - 1; i >= 0; i--)
             {
                 if (hand1[i].Value < hand2[i].Value)
                 {

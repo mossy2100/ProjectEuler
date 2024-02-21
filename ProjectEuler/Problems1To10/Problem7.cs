@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// 10001st prime.
-/// <see href="https://projecteuler.net/problem=7" />
+/// <see href="https://projecteuler.net/problem=7"/>
 /// </summary>
 public static class Problem7
 {

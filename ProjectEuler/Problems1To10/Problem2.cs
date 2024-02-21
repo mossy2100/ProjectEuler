@@ -2,7 +2,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Even Fibonacci numbers.
-/// <see href="https://projecteuler.net/problem=2" />
+/// <see href="https://projecteuler.net/problem=2"/>
 /// </summary>
 public static class Problem2
 {
@@ -14,7 +14,7 @@ public static class Problem2
         while (true)
         {
             // Get the next number.
-            var c = a + b;
+            int c = a + b;
 
             // Check if we're done.
             if (c > 4000000)

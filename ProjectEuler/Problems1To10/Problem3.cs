@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Largest prime factor.
-/// <see href="https://projecteuler.net/problem=3" />
+/// <see href="https://projecteuler.net/problem=3"/>
 /// </summary>
 public static class Problem3
 {
@@ -21,6 +21,8 @@ public static class Problem3
         }
     }
 
-    public static long Answer() =>
-        (long)Primes.PrimeFactors(600851475143).Last();
+    public static long Answer()
+    {
+        return (long)Primes.PrimeFactors(600851475143).Last();
+    }
 }

@@ -5,12 +5,14 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Amicable numbers.
-/// <see href="https://projecteuler.net/problem=21" />
+/// <see href="https://projecteuler.net/problem=21"/>
 /// </summary>
 public static class Problem21
 {
-    private static long D(long n) =>
-        (long)Divisors.GetProperDivisors(n).Sum();
+    private static long D(long n)
+    {
+        return (long)Divisors.GetProperDivisors(n).Sum();
+    }
 
     public static long Answer()
     {
@@ -27,7 +29,7 @@ public static class Problem21
             }
 
             // Find b.
-            var b = D(a);
+            long b = D(a);
 
             // See if a and b are an amicable pair.
             if (a != b && D(b) == a)

@@ -5,7 +5,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Pandigital multiples.
-/// <see href="https://projecteuler.net/problem=38" />
+/// <see href="https://projecteuler.net/problem=38"/>
 /// </summary>
 public static class Problem38
 {

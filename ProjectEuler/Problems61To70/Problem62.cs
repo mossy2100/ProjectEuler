@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Cubic permutations.
-/// <see href="https://projecteuler.net/problem=62" />
+/// <see href="https://projecteuler.net/problem=62"/>
 /// </summary>
 public static class Problem62
 {
@@ -22,8 +22,8 @@ public static class Problem62
         // Get all the cubes with this many digits.
         while (true)
         {
-            var min = Pow(10, nDigits - 1);
-            var max = min * 10 - 1;
+            double min = Pow(10, nDigits - 1);
+            double max = min * 10 - 1;
 
             // Store the cubes we find with this many digits.
             List<ulong> cubes = new ();
@@ -31,7 +31,7 @@ public static class Problem62
             // Get all the cubes with this many digits.
             while (true)
             {
-                var nCubed = n * n * n;
+                ulong nCubed = n * n * n;
                 if (nCubed > max)
                 {
                     break;
@@ -50,39 +50,39 @@ public static class Problem62
             // Try to find 5 matching numbers from the current set of cubes.
             for (var i0 = 0; i0 < cubes.Count - 4; i0++)
             {
-                var cube0 = cubes[i0];
-                var str0 = Factorials.SortDigits(cube0);
-                for (var i1 = i0 + 1; i1 < cubes.Count - 3; i1++)
+                ulong cube0 = cubes[i0];
+                string str0 = Combinatorial.SortDigits(cube0);
+                for (int i1 = i0 + 1; i1 < cubes.Count - 3; i1++)
                 {
-                    var cube1 = cubes[i1];
-                    var str1 = Factorials.SortDigits(cube1);
+                    ulong cube1 = cubes[i1];
+                    string str1 = Combinatorial.SortDigits(cube1);
                     if (str0 != str1)
                     {
                         continue;
                     }
 
-                    for (var i2 = i1 + 1; i2 < cubes.Count - 2; i2++)
+                    for (int i2 = i1 + 1; i2 < cubes.Count - 2; i2++)
                     {
-                        var cube2 = cubes[i2];
-                        var str2 = Factorials.SortDigits(cube2);
+                        ulong cube2 = cubes[i2];
+                        string str2 = Combinatorial.SortDigits(cube2);
                         if (str0 != str2)
                         {
                             continue;
                         }
 
-                        for (var i3 = i2 + 1; i3 < cubes.Count - 1; i3++)
+                        for (int i3 = i2 + 1; i3 < cubes.Count - 1; i3++)
                         {
-                            var cube3 = cubes[i3];
-                            var str3 = Factorials.SortDigits(cube3);
+                            ulong cube3 = cubes[i3];
+                            string str3 = Combinatorial.SortDigits(cube3);
                             if (str0 != str3)
                             {
                                 continue;
                             }
 
-                            for (var i4 = i3 + 1; i4 < cubes.Count; i4++)
+                            for (int i4 = i3 + 1; i4 < cubes.Count; i4++)
                             {
-                                var cube4 = cubes[i4];
-                                var str4 = Factorials.SortDigits(cube4);
+                                ulong cube4 = cubes[i4];
+                                string str4 = Combinatorial.SortDigits(cube4);
                                 if (str0 != str4)
                                 {
                                     continue;

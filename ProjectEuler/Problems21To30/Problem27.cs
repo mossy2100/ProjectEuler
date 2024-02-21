@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Quadratic primes.
-/// <see href="https://projecteuler.net/problem=27" />
+/// <see href="https://projecteuler.net/problem=27"/>
 /// </summary>
 public static class Problem27
 {
@@ -16,9 +16,9 @@ public static class Problem27
         var maxB = 0;
 
         // Loop through all combinations of a and b.
-        for (var a = -999; a <= 999; a++)
+        for (int a = -999; a <= 999; a++)
         {
-            for (var b = -1000; b <= 1000; b++)
+            for (int b = -1000; b <= 1000; b++)
             {
                 var count = 0;
                 var n = 0;

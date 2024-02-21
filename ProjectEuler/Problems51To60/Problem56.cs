@@ -5,7 +5,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Powerful digit sum.
-/// <see href="https://projecteuler.net/problem=56" />
+/// <see href="https://projecteuler.net/problem=56"/>
 /// </summary>
 public static class Problem56
 {
@@ -17,7 +17,7 @@ public static class Problem56
             for (var b = 1; b < 100; b++)
             {
                 var c = BigInteger.Pow(a, b);
-                var digitSum = c.DigitSum();
+                BigInteger digitSum = c.DigitSum();
                 if (digitSum > maxDigitSum)
                 {
                     maxDigitSum = digitSum;

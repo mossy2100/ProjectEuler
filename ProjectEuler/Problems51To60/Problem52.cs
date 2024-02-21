@@ -2,7 +2,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Permuted multiples.
-/// <see href="https://projecteuler.net/problem=52" />
+/// <see href="https://projecteuler.net/problem=52"/>
 /// </summary>
 public static class Problem52
 {
@@ -18,8 +18,8 @@ public static class Problem52
         var x = 1;
         while (true)
         {
-            var y = x;
-            var digits1 = UniqueDigits(y);
+            int y = x;
+            string digits1 = UniqueDigits(y);
             var answerFound = true;
 
             for (var i = 2; i <= 6; i++)
@@ -27,7 +27,7 @@ public static class Problem52
                 // Compare the digits in x with the digits in (i * x).
                 // Use addition to avoid multiplication and thus save time.
                 y += x;
-                var digits2 = UniqueDigits(y);
+                string digits2 = UniqueDigits(y);
                 if (digits2 != digits1)
                 {
                     answerFound = false;

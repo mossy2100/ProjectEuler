@@ -2,7 +2,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Coin sums.
-/// <see href="https://projecteuler.net/problem=31" />
+/// <see href="https://projecteuler.net/problem=31"/>
 /// </summary>
 public static class Problem31
 {
@@ -16,10 +16,10 @@ public static class Problem31
         coinsSoFar ??= new CoinSet();
 
         // Get the max value of the coins we want to consider for the next in the set.
-        var max = coinsSoFar.Smallest ?? Coins[^1];
+        int max = coinsSoFar.Smallest ?? Coins[^1];
 
         // Consider possible next coins from largest to smallest.
-        foreach (var coin in Coins.Reverse())
+        foreach (int coin in Coins.Reverse())
         {
             if (coin > total || coin > max)
             {
@@ -33,7 +33,7 @@ public static class Problem31
             newCoinSet.Add(coin);
 
             // Calculate the remainder.
-            var rem = total - coin;
+            int rem = total - coin;
 
             // Are we done?
             if (rem == 0)
@@ -53,10 +53,10 @@ public static class Problem31
 
     public static long Answer()
     {
-        var coinSets = GetCoinSets(200);
+        List<CoinSet> coinSets = GetCoinSets(200);
 
         // DEBUG.
-        foreach (var coinSet in coinSets)
+        foreach (CoinSet coinSet in coinSets)
         {
             coinSet.Print();
         }
@@ -69,12 +69,12 @@ public class CoinSet
 {
     private readonly Dictionary<int, int> coins = new ();
 
-    public CoinSet()
-    {
-    }
+    public CoinSet() { }
 
-    public CoinSet(CoinSet coinSetToClone) =>
+    public CoinSet(CoinSet coinSetToClone)
+    {
         coins = new Dictionary<int, int>(coinSetToClone.coins);
+    }
 
     public int? Smallest
     {
@@ -85,9 +85,9 @@ public class CoinSet
                 return null;
             }
             int? smallest = null;
-            foreach (var pair in coins)
+            foreach (KeyValuePair<int, int> pair in coins)
             {
-                if (smallest == null || pair.Key < smallest && pair.Value > 0)
+                if (smallest == null || (pair.Key < smallest && pair.Value > 0))
                 {
                     smallest = pair.Key;
                 }
@@ -107,10 +107,12 @@ public class CoinSet
 
     private static string CoinToString(KeyValuePair<int, int> coin)
     {
-        var d = coin.Key >= 100 ? $"£{coin.Key / 100}" : $"{coin.Key}p";
+        string d = coin.Key >= 100 ? $"£{coin.Key / 100}" : $"{coin.Key}p";
         return $"{coin.Value}x{d}";
     }
 
-    public void Print() =>
+    public void Print()
+    {
         Console.WriteLine(string.Join(", ", coins.Select(CoinToString)));
+    }
 }

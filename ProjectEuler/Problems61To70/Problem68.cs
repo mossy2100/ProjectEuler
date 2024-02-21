@@ -4,32 +4,32 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Magic 5-gon ring.
-/// <see href="https://projecteuler.net/problem=68" />
+/// <see href="https://projecteuler.net/problem=68"/>
 /// </summary>
 public static class Problem68
 {
     public static bool IsValid(List<int> fiveGon)
     {
-        var sum1 = fiveGon[5] + fiveGon[0] + fiveGon[1];
-        var sum2 = fiveGon[6] + fiveGon[1] + fiveGon[2];
-        var sum3 = fiveGon[7] + fiveGon[2] + fiveGon[3];
-        var sum4 = fiveGon[8] + fiveGon[3] + fiveGon[4];
-        var sum5 = fiveGon[9] + fiveGon[4] + fiveGon[0];
+        int sum1 = fiveGon[5] + fiveGon[0] + fiveGon[1];
+        int sum2 = fiveGon[6] + fiveGon[1] + fiveGon[2];
+        int sum3 = fiveGon[7] + fiveGon[2] + fiveGon[3];
+        int sum4 = fiveGon[8] + fiveGon[3] + fiveGon[4];
+        int sum5 = fiveGon[9] + fiveGon[4] + fiveGon[0];
         return sum1 == sum2 && sum1 == sum3 && sum1 == sum4 && sum1 == sum5;
     }
 
     public static long Answer()
     {
         List<int> nums = new () { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        var fiveGons = Factorials.GetPermutations(nums, 10);
+        List<List<int>> fiveGons = Combinatorial.GetPermutations(nums, 10);
         long max = 0;
 
-        foreach (var fiveGon in fiveGons)
+        foreach (List<int> fiveGon in fiveGons)
         {
             if (IsValid(fiveGon))
             {
                 // Find the numerically lowest external node.
-                var min = int.MaxValue;
+                int min = int.MaxValue;
                 var minPos = 0;
                 for (var i = 5; i < 10; i++)
                 {
@@ -46,7 +46,7 @@ public static class Problem68
                 var tripletDigits = new string[5];
                 var armSums = new int[5];
 
-                var pos = minPos;
+                int pos = minPos;
                 for (var i = 0; i < 5; i++)
                 {
                     values[i] = new[]

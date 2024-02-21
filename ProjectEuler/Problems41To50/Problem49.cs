@@ -3,7 +3,7 @@ using Galaxon.Numerics.Integers;
 namespace Galaxon.ProjectEuler;
 
 /// <summary>
-///     <see href="https://projecteuler.net/problem=" />
+///     <see href="https://projecteuler.net/problem="/>
 /// </summary>
 public static class Problem49
 {
@@ -12,7 +12,7 @@ public static class Problem49
         // We know the terms have 4 digits.
         for (var n = 1000; n <= 9999; n++)
         {
-            var permutations = Factorials.CharPermutations(n.ToString());
+            List<string> permutations = Combinatorial.CharPermutations(n.ToString());
 
             // Extract the 4-digit primes.
             var primes = permutations.Select(ulong.Parse)
@@ -25,7 +25,7 @@ public static class Problem49
             }
 
             // We need at least 3 primes.
-            var nPrimes = primes.Count;
+            int nPrimes = primes.Count;
             if (nPrimes < 3)
             {
                 continue;
@@ -35,18 +35,18 @@ public static class Problem49
             primes.Sort();
 
             // Convert to an array so we can use the indices.
-            var aPrimes = primes.ToArray();
+            ulong[] aPrimes = primes.ToArray();
 
             // Look for a sequence of 3 with equal difference between them.
             for (var i = 0; i <= nPrimes - 3; i++)
             {
-                var pi = aPrimes[i];
-                for (var j = i + 1; j <= nPrimes - 2; j++)
+                ulong pi = aPrimes[i];
+                for (int j = i + 1; j <= nPrimes - 2; j++)
                 {
-                    var pj = aPrimes[j];
-                    for (var k = j + 1; k <= nPrimes - 1; k++)
+                    ulong pj = aPrimes[j];
+                    for (int k = j + 1; k <= nPrimes - 1; k++)
                     {
-                        var pk = aPrimes[k];
+                        ulong pk = aPrimes[k];
                         if (pj - pi == pk - pj)
                         {
                             // Found it.

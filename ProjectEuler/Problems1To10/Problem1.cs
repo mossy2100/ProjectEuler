@@ -2,7 +2,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Multiples of 3 or 5.
-/// <see href="https://projecteuler.net/problem=1" />
+/// <see href="https://projecteuler.net/problem=1"/>
 /// </summary>
 public static class Problem1
 {

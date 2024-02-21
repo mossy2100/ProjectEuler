@@ -2,7 +2,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Lattice paths.
-/// <see href="https://projecteuler.net/problem=15" />
+/// <see href="https://projecteuler.net/problem=15"/>
 /// </summary>
 public static class Problem15
 {
@@ -11,8 +11,8 @@ public static class Problem15
     private static long GetNumPaths(int x0, int y0, int x1, int y1)
     {
         // Check cache.
-        var dx = x1 - x0;
-        var dy = y1 - y0;
+        int dx = x1 - x0;
+        int dy = y1 - y0;
         if (NumPathsCache.ContainsKey((dx, dy)))
         {
             return NumPathsCache[(dx, dy)];
@@ -42,7 +42,7 @@ public static class Problem15
     public static long Answer()
     {
         const int n = 20;
-        var numPaths = GetNumPaths(0, 0, n, n);
+        long numPaths = GetNumPaths(0, 0, n, n);
         return numPaths;
     }
 }

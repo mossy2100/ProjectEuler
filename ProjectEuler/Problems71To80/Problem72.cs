@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Counting fractions.
-/// <see href="https://projecteuler.net/problem=72" />
+/// <see href="https://projecteuler.net/problem=72"/>
 /// </summary>
 public static class Problem72
 {

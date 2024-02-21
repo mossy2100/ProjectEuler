@@ -5,7 +5,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Lychrel numbers.
-/// <see href="https://projecteuler.net/problem=55" />
+/// <see href="https://projecteuler.net/problem=55"/>
 /// </summary>
 public static class Problem55
 {

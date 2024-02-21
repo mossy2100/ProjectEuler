@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Odd period square roots.
-/// <see href="https://projecteuler.net/problem=64" />
+/// <see href="https://projecteuler.net/problem=64"/>
 /// </summary>
 public static class Problem64
 {
@@ -13,9 +13,9 @@ public static class Problem64
         var count = 0;
         for (var a = 2; a <= 10000; a++)
         {
-            var s = Sqrt(a);
+            double s = Sqrt(a);
             var b = (int)Floor(s);
-            var r = s - b;
+            double r = s - b;
 
             // Skip perfect squares.
             if (r.FuzzyEquals(0))
@@ -31,7 +31,7 @@ public static class Problem64
             List<(int value, string strFrac)> seq = new ();
             while (true)
             {
-                var e = frac.Invert();
+                int e = frac.Invert();
                 var strFrac = frac.ToString();
 
                 if (seq.Any(tup => tup.strFrac == strFrac))
@@ -64,7 +64,9 @@ public static class Problem64
 public class Problem64Fraction
 {
     public int A;
+
     public int B;
+
     public int C;
 
     public Problem64Fraction(int a, int b, int c)
@@ -76,7 +78,7 @@ public class Problem64Fraction
 
     public int Invert()
     {
-        var d = A - B * B;
+        int d = A - B * B;
         var e = (int)Floor(C * (Sqrt(A) + B) / d);
         d /= C;
         B = e * d - B;
@@ -84,6 +86,8 @@ public class Problem64Fraction
         return e;
     }
 
-    public override string ToString() =>
-        $"(√{A}-{B})/{C}";
+    public override string ToString()
+    {
+        return $"(√{A}-{B})/{C}";
+    }
 }

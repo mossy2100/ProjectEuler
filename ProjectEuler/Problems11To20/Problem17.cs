@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Number letter counts.
-/// <see href="https://projecteuler.net/problem=17" />
+/// <see href="https://projecteuler.net/problem=17"/>
 /// </summary>
 public static class Problem17
 {
@@ -14,8 +14,8 @@ public static class Problem17
         for (var i = 0; i < 100; i++)
         {
             var n = (uint)rand.Next();
-            var words = NumberStrings.NumberToWords(n);
-            var letterCount = NumberStrings.LetterCount(words);
+            string words = NumberStrings.NumberToWords(n);
+            int letterCount = NumberStrings.LetterCount(words);
             Console.WriteLine($"{n} = {words} ({letterCount} letters).");
         }
     }

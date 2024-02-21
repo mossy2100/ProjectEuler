@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Distinct primes factors.
-/// <see href="https://projecteuler.net/problem=47" />
+/// <see href="https://projecteuler.net/problem=47"/>
 /// </summary>
 public static class Problem47
 {
@@ -20,7 +20,7 @@ public static class Problem47
 
             for (byte i = 0; i < 4; i++)
             {
-                var p = Primes.NumDistinctPrimeFactors(n + i);
+                int p = Primes.NumDistinctPrimeFactors(n + i);
                 if (p != 4)
                 {
                     match = false;

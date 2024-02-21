@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// 1000-digit Fibonacci number.
-/// <see href="https://projecteuler.net/problem=25" />
+/// <see href="https://projecteuler.net/problem=25"/>
 /// </summary>
 public static class Problem25
 {
@@ -15,7 +15,7 @@ public static class Problem25
         var i = 3;
         while (true)
         {
-            var c = a + b;
+            BigInteger c = a + b;
             if (c >= BigInteger.Pow(10, 999))
             {
                 return i;

@@ -5,7 +5,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Smallest multiple.
-/// <see href="https://projecteuler.net/problem=5" />
+/// <see href="https://projecteuler.net/problem=5"/>
 /// </summary>
 public static class Problem5
 {
@@ -14,8 +14,8 @@ public static class Problem5
         List<ulong> factors = new ();
         for (ulong i = 2; i <= 20; i++)
         {
-            var factors2 = Primes.PrimeFactors(i);
-            var newFactors = factors2.Diff(factors);
+            List<ulong> factors2 = Primes.PrimeFactors(i);
+            IEnumerable<ulong> newFactors = factors2.Diff(factors);
             factors.AddRange(newFactors);
         }
         return (long)factors.Aggregate(1UL, (product, factor) => product * factor);

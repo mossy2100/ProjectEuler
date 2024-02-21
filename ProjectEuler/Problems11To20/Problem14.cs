@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Longest Collatz sequence.
-/// <see href="https://projecteuler.net/problem=14" />
+/// <see href="https://projecteuler.net/problem=14"/>
 /// </summary>
 public static class Problem14
 {
@@ -22,7 +22,7 @@ public static class Problem14
         var startOfLongestChain = 0;
         for (var i = 1; i < 1_000_000; i++)
         {
-            var len = Sequences.Collatz(i).Count;
+            int len = Sequences.Collatz(i).Count;
             if (len > longestChainLength)
             {
                 longestChainLength = len;

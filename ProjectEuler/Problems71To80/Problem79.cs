@@ -2,7 +2,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Passcode derivation.
-/// <see href="https://projecteuler.net/problem=79" />
+/// <see href="https://projecteuler.net/problem=79"/>
 /// </summary>
 public static class Problem79
 {
@@ -19,11 +19,11 @@ public static class Problem79
     public static long Answer()
     {
         // Get the codes.
-        var path = Utility.GetDataFilePath("p079_keylog.txt");
-        var codes = File.ReadAllLines(path);
+        string path = Utility.GetDataFilePath("p079_keylog.txt");
+        string[] codes = File.ReadAllLines(path);
 
         // Take note of what digits come after what digits.
-        foreach (var code in codes)
+        foreach (string code in codes)
         {
             // Get the code digits.
             var digit0 = (byte)(code[0] - '0');

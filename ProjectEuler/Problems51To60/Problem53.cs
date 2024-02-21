@@ -1,10 +1,11 @@
+using System.Numerics;
 using Galaxon.Numerics.Integers;
 
 namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Combinatoric selections.
-/// <see href="https://projecteuler.net/problem=53" />
+/// <see href="https://projecteuler.net/problem=53"/>
 /// </summary>
 public static class Problem53
 {
@@ -15,7 +16,7 @@ public static class Problem53
         {
             for (var r = 1; r < n; r++)
             {
-                var c = Factorials.NumCombinations(n, r);
+                BigInteger c = Combinatorial.NumCombinations(n, r);
                 if (c > 1000000)
                 {
                     count++;

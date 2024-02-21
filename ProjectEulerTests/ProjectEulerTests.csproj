@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
@@ -9,10 +9,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.0"/>
-        <PackageReference Include="MSTest.TestAdapter" Version="2.2.10"/>
-        <PackageReference Include="MSTest.TestFramework" Version="2.2.10"/>
-        <PackageReference Include="coverlet.collector" Version="3.2.0">
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+        <PackageReference Include="MSTest.TestAdapter" Version="3.2.1" />
+        <PackageReference Include="MSTest.TestFramework" Version="3.2.1" />
+        <PackageReference Include="coverlet.collector" Version="6.0.1">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
@@ -23,8 +23,17 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Reference Include="Galaxon.BigNumbers">
+            <HintPath>..\..\Galaxon\Numerics\BigNumbers\bin\Debug\net8.0\Galaxon.BigNumbers.dll</HintPath>
+        </Reference>
         <Reference Include="Galaxon.Core">
-            <HintPath>..\..\Core\Core\bin\Debug\net7.0\Galaxon.Core.dll</HintPath>
+            <HintPath>..\..\Galaxon\Core\bin\Debug\net8.0\Galaxon.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Galaxon.Numerics.Geometry">
+            <HintPath>..\..\Galaxon\Numerics\Geometry\bin\Debug\net8.0\Galaxon.Numerics.Geometry.dll</HintPath>
+        </Reference>
+        <Reference Include="Galaxon.Numerics.Integers">
+            <HintPath>..\..\Galaxon\Numerics\Integers\bin\Debug\net8.0\Galaxon.Numerics.Integers.dll</HintPath>
         </Reference>
     </ItemGroup>
 

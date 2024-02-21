@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Consecutive prime sum.
-/// <see href="https://projecteuler.net/problem=50" />
+/// <see href="https://projecteuler.net/problem=50"/>
 /// </summary>
 public static class Problem50
 {
@@ -12,7 +12,7 @@ public static class Problem50
     {
         // Find all the primes we need for this problem.
         uint max = 1_000_000;
-        var primes = Primes.GetPrimesUpTo(max);
+        List<ulong> primes = Primes.GetPrimesUpTo(max);
 
         // Keep track of the best solution.
         uint maxNTerms = 1;
@@ -23,7 +23,7 @@ public static class Problem50
         {
             ulong sum = 0;
             uint nTerms = 0;
-            for (var j = i; j < primes.Count; j++)
+            for (int j = i; j < primes.Count; j++)
             {
                 sum += primes[j];
                 nTerms++;

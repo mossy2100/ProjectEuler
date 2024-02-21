@@ -3,14 +3,14 @@ using Galaxon.Numerics.Integers;
 namespace Galaxon.ProjectEuler;
 
 /// <summary>
-///     <see href="https://projecteuler.net/problem=" />
+///     <see href="https://projecteuler.net/problem="/>
 /// </summary>
 public static class Problem28
 {
     public static long Answer()
     {
         const int SIZE = 1001;
-        var spiral = Grids.ConstructSpiral(SIZE, true, EDirection.Right);
+        uint?[,] spiral = Grids.ConstructSpiral(SIZE, true, EDirection.Right);
         // PrintGrid(spiral, size);
 
         // Sum the diagonals.

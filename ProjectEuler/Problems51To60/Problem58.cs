@@ -4,13 +4,13 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Spiral primes.
-/// <see href="https://projecteuler.net/problem=58" />
+/// <see href="https://projecteuler.net/problem=58"/>
 /// </summary>
 public static class Problem58
 {
     public static long Answer()
     {
-        var t1 = DateTime.Now.Ticks;
+        long t1 = DateTime.Now.Ticks;
 
         // Repeatedly add layers until result found.
         var size = 1;
@@ -46,8 +46,8 @@ public static class Problem58
             }
         }
 
-        var t2 = DateTime.Now.Ticks;
-        var t = (t2 - t1) / TimeSpan.TicksPerMillisecond;
+        long t2 = DateTime.Now.Ticks;
+        long t = (t2 - t1) / TimeSpan.TicksPerMillisecond;
         Console.WriteLine($"Total execution time = {t} ms.");
 
         return size;

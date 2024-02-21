@@ -1,9 +1,9 @@
-using Galaxon.Numerics.Integers;
+using Galaxon.Core.Numbers;
 
 namespace Galaxon.ProjectEuler;
 
 /// <summary>
-///     <see href="https://projecteuler.net/problem=" />
+///     <see href="https://projecteuler.net/problem="/>
 /// </summary>
 public static class Problem34
 {
@@ -12,7 +12,7 @@ public static class Problem34
         long result = 0;
 
         // Cache this value to speed up calculation of max factorial sum for n-digit number.
-        var factorial9 = (long)Factorials.Factorial(9);
+        var factorial9 = (long)BigIntegerExtensions.Factorial(9);
 
         // We need at least 2 digits in the value being checked or it won't be a sum.
         var nDigits = 2;
@@ -27,7 +27,7 @@ public static class Problem34
             Console.WriteLine($"Checking {nDigits}-digit numbers. From {min} to {max}");
 
             // Calculate the maximum factorial sum for numbers with this many digits.
-            var maxSum = factorial9 * nDigits;
+            long maxSum = factorial9 * nDigits;
             Console.WriteLine($"Maximum factorial sum of digits is {maxSum}");
 
             // If the smallest value with this many digits is larger than the maximum factorial sum,
@@ -40,9 +40,10 @@ public static class Problem34
             // Check values.
             for (long i = min; i <= max; i++)
             {
-                var digits = i.ToString().ToCharArray().Select(c => c - '0').ToArray();
-                var factorials = digits.Select(digit => (long)Factorials.Factorial(digit)).ToList();
-                var sum = factorials.Sum();
+                int[] digits = i.ToString().ToCharArray().Select(c => c - '0').ToArray();
+                var factorials = digits.Select(digit => (long)BigIntegerExtensions.Factorial(digit))
+                    .ToList();
+                long sum = factorials.Sum();
                 if (i == sum)
                 {
                     result += i;

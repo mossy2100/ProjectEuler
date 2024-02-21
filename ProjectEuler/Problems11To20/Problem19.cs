@@ -2,20 +2,24 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Counting Sundays.
-/// <see href="https://projecteuler.net/problem=19" />
+/// <see href="https://projecteuler.net/problem=19"/>
 /// </summary>
 public static class Problem19
 {
-    private static bool IsLeapYear(int year) =>
-        year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+    private static bool IsLeapYear(int year)
+    {
+        return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+    }
 
-    private static int DaysInMonth(int year, int month) =>
-        month switch
+    private static int DaysInMonth(int year, int month)
+    {
+        return month switch
         {
             2 => IsLeapYear(year) ? 29 : 28,
             <= 7 => 30 + month % 2,
             _ => 31 - month % 2
         };
+    }
 
     public static long Answer()
     {

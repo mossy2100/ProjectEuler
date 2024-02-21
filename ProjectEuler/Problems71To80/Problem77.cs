@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Prime summations.
-/// <see href="https://projecteuler.net/problem=77" />
+/// <see href="https://projecteuler.net/problem=77"/>
 /// </summary>
 public static class Problem77
 {
@@ -26,11 +26,11 @@ public static class Problem77
         var count = 0;
 
         // Get primes up to the smaller of n and max.
-        var primes = Primes.GetPrimesUpTo((ulong)Min(n, (int)max));
+        List<ulong> primes = Primes.GetPrimesUpTo((ulong)Min(n, (int)max));
 
         // Let a be the first in the series of primes that form the sum.
         // It cannot be greater than max.
-        for (var i = primes.Count - 1; i >= 0; i--)
+        for (int i = primes.Count - 1; i >= 0; i--)
         {
             var a = (int)primes[i];
             if (a == n)

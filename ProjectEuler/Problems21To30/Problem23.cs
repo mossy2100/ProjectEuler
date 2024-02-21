@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Non-abundant sums.
-/// <see href="https://projecteuler.net/problem=23" />
+/// <see href="https://projecteuler.net/problem=23"/>
 /// </summary>
 public static class Problem23
 {
@@ -28,14 +28,14 @@ public static class Problem23
         for (var i = 1; i <= max; i++)
         {
             var isSumOf2AbundantNums = false;
-            foreach (var a in abundantNumbers)
+            foreach (int a in abundantNumbers)
             {
                 if (a > i / 2)
                 {
                     break;
                 }
 
-                var b = i - a;
+                int b = i - a;
                 if (!abundantNumbers.Contains(b))
                 {
                     continue;

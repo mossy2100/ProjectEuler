@@ -5,11 +5,12 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Cyclical figurate numbers.
-/// <see href="https://projecteuler.net/problem=61" />
+/// <see href="https://projecteuler.net/problem=61"/>
 /// </summary>
 public static class Problem61
 {
     private const int _Min = 11;
+
     private const int _Max = 99;
 
     /// <summary>
@@ -27,16 +28,16 @@ public static class Problem61
             if (currentState.ResultSoFar[s - 3] == 0)
             {
                 // Generate the 4-digit number.
-                var x0 = currentState.TwoDigitNums[currentState.Iteration];
-                var x = x0 * 100 + x1;
+                int x0 = currentState.TwoDigitNums[currentState.Iteration];
+                int x = x0 * 100 + x1;
 
                 // Check if it's polygonal.
-                var isPolygonal = Polygonal.IsPolygonal(s, (ulong)x);
+                bool isPolygonal = Polygonal.IsPolygonal(s, (ulong)x);
 
                 // If so, construct the new problem state and add it to the results.
                 if (isPolygonal)
                 {
-                    var state = currentState.Clone();
+                    Problem61State state = currentState.Clone();
                     state.ResultSoFar[s - 3] = x;
                     state.Iteration = currentState.Iteration + 1;
                     state.TwoDigitNums[state.Iteration] = x1;
@@ -53,7 +54,7 @@ public static class Problem61
     {
         // Create initial states, one for each possible starting number, from 11..99.
         List<Problem61State> newResults = new ();
-        for (var x0 = _Min; x0 <= _Max; x0++)
+        for (int x0 = _Min; x0 <= _Max; x0++)
         {
             Problem61State state = new ()
             {
@@ -68,11 +69,11 @@ public static class Problem61
         {
             results = newResults.ToList();
             newResults = new List<Problem61State>();
-            foreach (var result in results)
+            foreach (Problem61State result in results)
             {
-                for (var x1 = _Min; x1 <= _Max; x1++)
+                for (int x1 = _Min; x1 <= _Max; x1++)
                 {
-                    var states = FindNextStates(result, x1);
+                    List<Problem61State> states = FindNextStates(result, x1);
                     newResults.AddRange(states);
                 }
             }
@@ -105,9 +106,12 @@ public class Problem61State
     /// <summary>
     /// Useful for debugging.
     /// </summary>
-    public override string ToString() =>
-        JsonSerializer.Serialize(ResultSoFar) + JsonSerializer.Serialize(TwoDigitNums)
-        + Iteration;
+    public override string ToString()
+    {
+        return JsonSerializer.Serialize(ResultSoFar)
+            + JsonSerializer.Serialize(TwoDigitNums)
+            + Iteration;
+    }
 
     public Problem61State Clone()
     {

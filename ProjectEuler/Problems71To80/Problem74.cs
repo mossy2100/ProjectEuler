@@ -5,7 +5,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Digit factorial chains.
-/// <see href="https://projecteuler.net/problem=74" />
+/// <see href="https://projecteuler.net/problem=74"/>
 /// </summary>
 public static class Problem74
 {
@@ -30,7 +30,7 @@ public static class Problem74
                 // Console.Write($"{n} -> ");
             }
 
-            var chainLength = chain.Count;
+            int chainLength = chain.Count;
             // Console.WriteLine();
             // Console.WriteLine($"Starting with {i} produces a chain of {chainLength} non-repeating terms.");
             // Console.WriteLine();

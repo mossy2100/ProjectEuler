@@ -1,9 +1,10 @@
+using System.Numerics;
 using Galaxon.Numerics.Integers;
 
 namespace Galaxon.ProjectEuler;
 
 /// <summary>
-///     <see href="https://projecteuler.net/problem=12" />
+///     <see href="https://projecteuler.net/problem=12"/>
 /// </summary>
 public static class Problem12
 {
@@ -14,7 +15,7 @@ public static class Problem12
         while (true)
         {
             triangleNumber += i;
-            var divisors = Divisors.GetDivisors(triangleNumber);
+            List<BigInteger> divisors = Divisors.GetDivisors(triangleNumber);
             if (divisors.Count > 500)
             {
                 return triangleNumber;

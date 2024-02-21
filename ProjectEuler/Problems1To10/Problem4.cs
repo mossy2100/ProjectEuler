@@ -5,7 +5,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Largest palindrome product.
-/// <see href="https://projecteuler.net/problem=4" />
+/// <see href="https://projecteuler.net/problem=4"/>
 /// </summary>
 public static class Problem4
 {
@@ -16,7 +16,7 @@ public static class Problem4
         {
             for (var j = 111; j <= 999; j++)
             {
-                var k = i * j;
+                int k = i * j;
                 if (((BigInteger)k).IsPalindromic() && k > max)
                 {
                     max = k;

@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Prime pair sets.
-/// <see href="https://projecteuler.net/problem=60" />
+/// <see href="https://projecteuler.net/problem=60"/>
 /// </summary>
 public static class Problem60
 {
@@ -34,18 +34,18 @@ public static class Problem60
         // Get some primes.
         // Make a guess at the largest prime in the set (it actually turns out to be 8389).
         Primes.Eratosthenes(10000);
-        var primes = Primes.Cache.ToArray();
-        var nPrimes = primes.Length;
+        ulong[] primes = Primes.Cache.ToArray();
+        int nPrimes = primes.Length;
 
         // Try all possible sets of values.
         for (var i1 = 0; i1 < nPrimes - 4; i1++)
         {
-            var p1 = primes[i1];
+            ulong p1 = primes[i1];
             // Console.WriteLine($"Testing first prime {p1}");
 
-            for (var i2 = i1 + 1; i2 < nPrimes - 3; i2++)
+            for (int i2 = i1 + 1; i2 < nPrimes - 3; i2++)
             {
-                var p2 = primes[i2];
+                ulong p2 = primes[i2];
 
                 // Test p2.
                 if (!AreConcatPrimes(p1, p2))
@@ -53,9 +53,9 @@ public static class Problem60
                     continue;
                 }
 
-                for (var i3 = i2 + 1; i3 < nPrimes - 2; i3++)
+                for (int i3 = i2 + 1; i3 < nPrimes - 2; i3++)
                 {
-                    var p3 = primes[i3];
+                    ulong p3 = primes[i3];
 
                     // Test p3.
                     if (!AreConcatPrimes(p1, p3))
@@ -67,9 +67,9 @@ public static class Problem60
                         continue;
                     }
 
-                    for (var i4 = i3 + 1; i4 < nPrimes - 1; i4++)
+                    for (int i4 = i3 + 1; i4 < nPrimes - 1; i4++)
                     {
-                        var p4 = primes[i4];
+                        ulong p4 = primes[i4];
 
                         // Test p4.
                         if (!AreConcatPrimes(p1, p4))
@@ -85,9 +85,9 @@ public static class Problem60
                             continue;
                         }
 
-                        for (var i5 = i4 + 1; i5 < nPrimes; i5++)
+                        for (int i5 = i4 + 1; i5 < nPrimes; i5++)
                         {
-                            var p5 = primes[i5];
+                            ulong p5 = primes[i5];
 
                             // Test p5.
                             if (!AreConcatPrimes(p1, p5))
@@ -108,7 +108,7 @@ public static class Problem60
                             }
 
                             // Found a solution.
-                            var sum = p1 + p2 + p3 + p4 + p5;
+                            ulong sum = p1 + p2 + p3 + p4 + p5;
                             if (lowestSum == 0 || sum < lowestSum)
                             {
                                 lowestSum = sum;
@@ -121,8 +121,8 @@ public static class Problem60
         } // for i1
 
         Console.WriteLine("Best set: " + string.Join(", ", resultSet));
-        var combos = Factorials.GetCombinations(resultSet, 2);
-        foreach (var combo in combos)
+        List<List<ulong>> combos = Combinatorial.GetCombinations(resultSet, 2);
+        foreach (List<ulong> combo in combos)
         {
             var num1 = ulong.Parse($"{combo[0]}{combo[1]}");
             var num2 = ulong.Parse($"{combo[1]}{combo[0]}");

@@ -2,35 +2,29 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Galaxon.ProjectEuler</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-        <Reference Include="Galaxon.Core">
-            <HintPath>..\..\Core\Core\bin\Debug\net7.0\Galaxon.Core.dll</HintPath>
-        </Reference>
-        <Reference Include="Galaxon.Numerics.BigDecimal">
-            <HintPath>..\..\BigDecimal\BigDecimal\bin\Debug\net7.0\Galaxon.Numerics.BigDecimal.dll</HintPath>
-        </Reference>
-        <Reference Include="Galaxon.Numerics.BigRational">
-            <HintPath>..\..\BigRational\BigRational\bin\Debug\net7.0\Galaxon.Numerics.BigRational.dll</HintPath>
-        </Reference>
-        <Reference Include="Galaxon.Numerics.Integers">
-            <HintPath>..\..\Numerics\Integers\bin\Debug\net7.0\Galaxon.Numerics.Integers.dll</HintPath>
-        </Reference>
-        <Reference Include="Galaxon.Numerics.Types">
-            <HintPath>..\..\Numerics\Types\bin\Debug\net7.0\Galaxon.Numerics.Types.dll</HintPath>
-        </Reference>
-        <Reference Include="Galaxon.Numerics.BigDecimal">
-            <HintPath>..\..\BigDecimal\BigDecimal\bin\Debug\net7.0\Galaxon.Numerics.BigDecimal.dll</HintPath>
-        </Reference>
+        <Compile Remove="Problems71To80\ProblemN2.cs" />
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Remove="Problems71To80\ProblemN2.cs" />
+      <Reference Include="Galaxon.BigNumbers">
+        <HintPath>..\..\Galaxon\Numerics\BigNumbers\bin\Debug\net8.0\Galaxon.BigNumbers.dll</HintPath>
+      </Reference>
+      <Reference Include="Galaxon.Core">
+        <HintPath>..\..\Galaxon\Core\bin\Debug\net8.0\Galaxon.Core.dll</HintPath>
+      </Reference>
+      <Reference Include="Galaxon.Numerics.Geometry">
+        <HintPath>..\..\Galaxon\Numerics\Geometry\bin\Debug\net8.0\Galaxon.Numerics.Geometry.dll</HintPath>
+      </Reference>
+      <Reference Include="Galaxon.Numerics.Integers">
+        <HintPath>..\..\Galaxon\Numerics\Integers\bin\Debug\net8.0\Galaxon.Numerics.Integers.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

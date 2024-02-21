@@ -2,7 +2,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Integer right triangles.
-/// <see href="https://projecteuler.net/problem=39" />
+/// <see href="https://projecteuler.net/problem=39"/>
 /// </summary>
 public static class Problem39
 {
@@ -19,10 +19,10 @@ public static class Problem39
             {
                 // Loop through possible lengths of side b.
                 // Specify b >= a to reduce duplicate matches.
-                for (var b = a; b <= p - 2; b++)
+                for (int b = a; b <= p - 2; b++)
                 {
                     // Calculate length of hypotenuse c from the total perimeter.
-                    var c = p - a - b;
+                    int c = p - a - b;
 
                     // Check c is longer than a and b to skip the multiplications if possible.
                     if (c <= a || c <= b)

@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Distinct powers.
-/// <see href="https://projecteuler.net/problem=29" />
+/// <see href="https://projecteuler.net/problem=29"/>
 /// </summary>
 public static class Problem29
 {

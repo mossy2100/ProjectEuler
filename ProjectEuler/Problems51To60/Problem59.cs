@@ -5,15 +5,15 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// XOR decryption.
-/// <see href="https://projecteuler.net/problem=59" />
+/// <see href="https://projecteuler.net/problem=59"/>
 /// </summary>
 public static class Problem59
 {
     public static long Answer()
     {
         // Load the values into an array.
-        var dataFilePath = Utility.GetDataFilePath("p059_cipher.txt");
-        var text = File.ReadAllText(dataFilePath);
+        string dataFilePath = Utility.GetDataFilePath("p059_cipher.txt");
+        string text = File.ReadAllText(dataFilePath);
         var encoded = text.Split(",").Select(ascii => (char)byte.Parse(ascii)).ToList();
 
         // Test each possible key. Look for the one that produces the most words.
@@ -58,9 +58,9 @@ public static class Problem59
                         // spaces. Thus it won't find words surrounded by quotes, or next to
                         // punctuation characters, or numbers, but it produces a correct answer
                         // regardless
-                        var matches = Regex
+                        MatchCollection matches = Regex
                             .Matches(originalText, @" [a-z]+ ", RegexOptions.IgnoreCase);
-                        var nWords = matches.Count;
+                        int nWords = matches.Count;
 
                         if (nWords > maxNWords)
                         {

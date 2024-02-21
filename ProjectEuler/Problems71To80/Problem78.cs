@@ -3,7 +3,7 @@ using Galaxon.Numerics.Integers;
 namespace Galaxon.ProjectEuler;
 
 /// <summary>
-///     <see href="https://projecteuler.net/problem=78" />
+///     <see href="https://projecteuler.net/problem=78"/>
 /// </summary>
 public static class Problem78
 {

@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Singular integer right triangles.
-/// <see href="https://projecteuler.net/problem=75" />
+/// <see href="https://projecteuler.net/problem=75"/>
 /// </summary>
 public static class Problem75
 {
@@ -28,7 +28,7 @@ public static class Problem75
         while (!done)
         {
             // Try values for m. We know m > n, and either m or n is even (not both).
-            var m = n + 1;
+            ulong m = n + 1;
 
             while (true)
             {
@@ -40,12 +40,12 @@ public static class Problem75
                 }
 
                 // Calculate a, b, c, and len.
-                var mSqr = m * m;
-                var nSqr = n * n;
-                var a = mSqr - nSqr;
-                var b = 2 * m * n;
-                var c = mSqr + nSqr;
-                var len = a + b + c;
+                ulong mSqr = m * m;
+                ulong nSqr = n * n;
+                ulong a = mSqr - nSqr;
+                ulong b = 2 * m * n;
+                ulong c = mSqr + nSqr;
+                ulong len = a + b + c;
 
                 // If perimeter is too large, stop checking values for m.
                 if (len > max)
@@ -60,7 +60,7 @@ public static class Problem75
                 }
 
                 // Check we haven't found this one already.
-                var triple = (a, b, c);
+                (ulong a, ulong b, ulong c) triple = (a, b, c);
                 if (!triples.Contains(triple))
                 {
                     // Found a primitive triple.
@@ -78,9 +78,9 @@ public static class Problem75
         }
 
         // Now we have the primitives, count up the multiples.
-        foreach (var triple in triples)
+        foreach ((ulong a, ulong b, ulong c) triple in triples)
         {
-            var len = triple.a + triple.b + triple.c;
+            ulong len = triple.a + triple.b + triple.c;
             for (ulong k = 2; k <= max / len; k++)
             {
                 count[k * len]++;

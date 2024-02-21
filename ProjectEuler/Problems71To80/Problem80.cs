@@ -1,12 +1,12 @@
 using System.Numerics;
+using Galaxon.BigNumbers;
 using Galaxon.Core.Numbers;
-using Galaxon.Numerics;
 
 namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Square root digital expansion.
-/// <see href="https://projecteuler.net/problem=80" />
+/// <see href="https://projecteuler.net/problem=80"/>
 /// </summary>
 public static class Problem80
 {
@@ -16,7 +16,7 @@ public static class Problem80
         var total = 0;
         for (var i = 2; i < 100; i++)
         {
-            BigDecimal sqrt = BigDecimal.Sqrt(i);
+            var sqrt = BigDecimal.Sqrt(i);
             Console.WriteLine($"The square root of {i} is {sqrt:N10}");
 
             if (sqrt.NumSigFigs <= 2)

@@ -2,7 +2,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Sum square difference.
-/// <see href="https://projecteuler.net/problem=6" />
+/// <see href="https://projecteuler.net/problem=6"/>
 /// </summary>
 public static class Problem6
 {

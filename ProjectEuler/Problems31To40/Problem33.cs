@@ -1,10 +1,10 @@
-using Galaxon.Numerics;
+using Galaxon.BigNumbers;
 
 namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Digit cancelling fractions.
-/// <see href="https://projecteuler.net/problem=33" />
+/// <see href="https://projecteuler.net/problem=33"/>
 /// </summary>
 public static class Problem33
 {
@@ -18,18 +18,18 @@ public static class Problem33
         {
             // The denominator must be greater than the numerator since the problem specifies
             // "less than 1 in value".
-            for (var d = n + 1; d <= 99; d++)
+            for (int d = n + 1; d <= 99; d++)
             {
                 var match = false;
 
                 // Calculate the quotient. Use decimal for accuracy.
-                var q1 = (decimal)n / d;
+                decimal q1 = (decimal)n / d;
 
                 // Get the digits as separate values.
-                var n1 = n / 10;
-                var n2 = n % 10;
-                var d1 = d / 10;
-                var d2 = d % 10;
+                int n1 = n / 10;
+                int n2 = n % 10;
+                int d1 = d / 10;
+                int d2 = d % 10;
 
                 // Skip the trivial matches.
                 if (n2 == 0 && d2 == 0)
@@ -42,7 +42,7 @@ public static class Problem33
                 // Case 1: the tens digit in the numerator matches the tens digit in the denominator.
                 if (n1 == d1 && d2 != 0)
                 {
-                    var q2 = (decimal)n2 / d2;
+                    decimal q2 = (decimal)n2 / d2;
                     if (q1 == q2)
                     {
                         match = true;
@@ -53,7 +53,7 @@ public static class Problem33
                 // Case 2: the tens digit in the numerator matches the units digit in the denominator.
                 if (n1 == d2 && d1 != 0)
                 {
-                    var q2 = (decimal)n2 / d1;
+                    decimal q2 = (decimal)n2 / d1;
                     if (q1 == q2)
                     {
                         match = true;
@@ -65,7 +65,7 @@ public static class Problem33
                 // Interestingly, this is the only case that produces matches.
                 if (n2 == d1 && d2 != 0)
                 {
-                    var q2 = (decimal)n1 / d2;
+                    decimal q2 = (decimal)n1 / d2;
                     if (q1 == q2)
                     {
                         match = true;
@@ -76,7 +76,7 @@ public static class Problem33
                 // Case 4: the units digit in the numerator matches the units digit in the denominator.
                 if (n2 == d2 && d1 != 0)
                 {
-                    var q2 = (decimal)n1 / d1;
+                    decimal q2 = (decimal)n1 / d1;
                     if (q1 == q2)
                     {
                         match = true;

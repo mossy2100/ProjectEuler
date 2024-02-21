@@ -4,7 +4,7 @@ namespace Galaxon.ProjectEuler;
 
 /// <summary>
 /// Powerful digit counts.
-/// <see href="https://projecteuler.net/problem=63" />
+/// <see href="https://projecteuler.net/problem=63"/>
 /// </summary>
 public static class Problem63
 {
@@ -17,7 +17,7 @@ public static class Problem63
         while (true)
         {
             var min = (BigInteger)Pow(10, n - 1);
-            var max = min * 10 - 1;
+            BigInteger max = min * 10 - 1;
 
             // Get starting value.
             var b = (int)Ceiling(Pow((double)min, 1.0 / n));
