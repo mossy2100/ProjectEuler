@@ -24,7 +24,11 @@
     &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test21To30.cs&lt;/ProjectFile&gt;
     &lt;TestAncestor&gt;
       &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net8.0::Galaxon.ProjectEuler.Tests.Test31To40&lt;/TestId&gt;
+      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net8.0::Galaxon.ProjectEuler.Tests.Test51To60&lt;/TestId&gt;
     &lt;/TestAncestor&gt;
+    &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test41To50.cs&lt;/ProjectFile&gt;
+    &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test61To70.cs&lt;/ProjectFile&gt;
+    &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test71To80.cs&lt;/ProjectFile&gt;
   &lt;/Or&gt;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>
