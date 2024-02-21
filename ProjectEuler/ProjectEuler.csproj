@@ -13,11 +13,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Reference Include="Galaxon.BigNumbers">
-        <HintPath>..\..\Galaxon\Numerics\BigNumbers\bin\Debug\net8.0\Galaxon.BigNumbers.dll</HintPath>
-      </Reference>
-      <Reference Include="Galaxon.Core">
-        <HintPath>..\..\Galaxon\Core\bin\Debug\net8.0\Galaxon.Core.dll</HintPath>
+        <Reference Include="Galaxon.Core">
+            <HintPath>..\..\Galaxon\Core\bin\Debug\net8.0\Galaxon.Core.dll</HintPath>
+        </Reference>
+      <Reference Include="Galaxon.Numerics.BigNumbers">
+        <HintPath>..\..\Galaxon\Numerics\BigNumbers\bin\Debug\net8.0\Galaxon.Numerics.BigNumbers.dll</HintPath>
       </Reference>
       <Reference Include="Galaxon.Numerics.Geometry">
         <HintPath>..\..\Galaxon\Numerics\Geometry\bin\Debug\net8.0\Galaxon.Numerics.Geometry.dll</HintPath>

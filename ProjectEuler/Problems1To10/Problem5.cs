@@ -1,4 +1,5 @@
 using Galaxon.Core.Collections;
+using Galaxon.Core.Numbers;
 using Galaxon.Numerics.Integers;
 
 namespace Galaxon.ProjectEuler;
@@ -15,9 +16,17 @@ public static class Problem5
         for (ulong i = 2; i <= 20; i++)
         {
             List<ulong> factors2 = Primes.PrimeFactors(i);
-            IEnumerable<ulong> newFactors = factors2.Diff(factors);
-            factors.AddRange(newFactors);
+
+            Console.WriteLine($"The prime factors if {i} are {string.Join(',', factors2)}");
+
+            List<ulong> newFactors = factors2.Diff(factors);
+
+            if (newFactors.Any())
+            {
+                Console.WriteLine($"The new prime factors are {string.Join(',', newFactors)}");
+                factors.AddRange(newFactors);
+            }
         }
-        return (long)factors.Aggregate(1UL, (product, factor) => product * factor);
+        return (long)factors.Product();
     }
 }

@@ -1,5 +1,5 @@
 using System.Numerics;
-using Galaxon.BigNumbers;
+using Galaxon.Numerics.BigNumbers;
 using Galaxon.Core.Numbers;
 
 namespace Galaxon.ProjectEuler;

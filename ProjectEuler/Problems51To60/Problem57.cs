@@ -1,4 +1,4 @@
-using Galaxon.BigNumbers;
+using Galaxon.Numerics.BigNumbers;
 using Galaxon.Numerics.Integers;
 
 namespace Galaxon.ProjectEuler;

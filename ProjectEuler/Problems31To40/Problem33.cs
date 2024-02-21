@@ -1,4 +1,4 @@
-using Galaxon.BigNumbers;
+using Galaxon.Numerics.BigNumbers;
 
 namespace Galaxon.ProjectEuler;
 
@@ -62,7 +62,7 @@ public static class Problem33
                 }
 
                 // Case 3: the units digit in the numerator matches the tens digit in the denominator.
-                // Interestingly, this is the only case that produces matches.
+                // *** NB: This is the only case that produces matches. ***
                 if (n2 == d1 && d2 != 0)
                 {
                     decimal q2 = (decimal)n1 / d2;
