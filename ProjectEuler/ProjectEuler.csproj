@@ -1,30 +1,41 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+<Project
+    Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Galaxon.ProjectEuler</RootNamespace>
+        <DebugType>portable</DebugType>
     </PropertyGroup>
-
     <ItemGroup>
-        <Compile Remove="Problems71To80\ProblemN2.cs" />
+        <Compile
+            Remove="Problems71To80\ProblemN2.cs" />
     </ItemGroup>
-
     <ItemGroup>
-        <Reference Include="Galaxon.Core">
+        <Reference
+            Include="Galaxon.Core">
             <HintPath>..\..\Galaxon\Core\bin\Debug\net8.0\Galaxon.Core.dll</HintPath>
         </Reference>
-      <Reference Include="Galaxon.Numerics.BigNumbers">
-        <HintPath>..\..\Galaxon\Numerics\BigNumbers\bin\Debug\net8.0\Galaxon.Numerics.BigNumbers.dll</HintPath>
-      </Reference>
-      <Reference Include="Galaxon.Numerics.Geometry">
-        <HintPath>..\..\Galaxon\Numerics\Geometry\bin\Debug\net8.0\Galaxon.Numerics.Geometry.dll</HintPath>
-      </Reference>
-      <Reference Include="Galaxon.Numerics.Integers">
-        <HintPath>..\..\Galaxon\Numerics\Integers\bin\Debug\net8.0\Galaxon.Numerics.Integers.dll</HintPath>
-      </Reference>
+        <Reference
+            Include="Galaxon.Numerics.BigNumbers">
+            <HintPath>..\..\Galaxon\Numerics\BigNumbers\bin\Debug\net8.0\Galaxon.Numerics.BigNumbers.dll</HintPath>
+        </Reference>
+        <Reference
+            Include="Galaxon.Numerics.Geometry">
+            <HintPath>..\..\Galaxon\Numerics\Geometry\bin\Debug\net8.0\Galaxon.Numerics.Geometry.dll</HintPath>
+        </Reference>
+        <Reference
+            Include="Galaxon.Numerics.Integers">
+            <HintPath>..\..\Galaxon\Numerics\Integers\bin\Debug\net8.0\Galaxon.Numerics.Integers.dll</HintPath>
+        </Reference>
+        <Reference
+            Include="Galaxon.Numerics.Extensions">
+            <HintPath>..\..\Galaxon\Numerics\Extensions\bin\Debug\net8.0\Galaxon.Numerics.Extensions.dll</HintPath>
+        </Reference>
+        <Reference
+            Include="Galaxon.Numerics.Algorithms">
+            <HintPath>..\..\Galaxon\Numerics\Algorithms\bin\Debug\net8.0\Galaxon.Numerics.Algorithms.dll</HintPath>
+        </Reference>
     </ItemGroup>
-
 </Project>

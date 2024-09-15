@@ -1,0 +1,14 @@
+{
+    "folders": [
+        {
+            "path": "../Galaxon"
+        },
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "dotnet-test-explorer.autoWatch": true,
+        "dotnet-test-explorer.testProjectPath": "**/*Tests.csproj"
+    },
+}

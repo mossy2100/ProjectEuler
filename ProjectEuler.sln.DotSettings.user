@@ -17,18 +17,16 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
   &lt;Assembly Path="/Users/shaun/Documents/Web &amp;amp; software development/C#/Projects/Galaxon/Core/Numbers/bin/Debug/net7.0/Galaxon.Core.Numbers.dll" /&gt;
 &lt;/AssemblyExplorer&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ac60cdf8_002D9426_002D4dc1_002D931c_002D7fdaaad6eef9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;ProjectEulerTests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;Or&gt;
-    &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test1To10.cs&lt;/ProjectFile&gt;
-    &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test11To20.cs&lt;/ProjectFile&gt;
-    &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test21To30.cs&lt;/ProjectFile&gt;
-    &lt;TestAncestor&gt;
-      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net8.0::Galaxon.ProjectEuler.Tests.Test31To40&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net8.0::Galaxon.ProjectEuler.Tests.Test51To60&lt;/TestId&gt;
-    &lt;/TestAncestor&gt;
-    &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test41To50.cs&lt;/ProjectFile&gt;
-    &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test61To70.cs&lt;/ProjectFile&gt;
-    &lt;ProjectFile&gt;6F1104F1-D5E3-4651-8A43-195C1E2F207F/f:Test71To80.cs&lt;/ProjectFile&gt;
-  &lt;/Or&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=44ef3adc_002Db215_002D47e8_002D8352_002D9b3ba340b35b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestProblem81" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net8.0::Galaxon.ProjectEuler.Tests.Test81To90.TestProblem81&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net8.0::Galaxon.ProjectEuler.Tests.Test81To90.TestProblem81Example&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net8.0::Galaxon.ProjectEuler.Tests.Test81To90.TestProblem82Example&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::6F1104F1-D5E3-4651-8A43-195C1E2F207F::net8.0::Galaxon.ProjectEuler.Tests.Test81To90.TestProblem82&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
+	
+	
+	
+	
 	</wpf:ResourceDictionary>

@@ -3,10 +3,10 @@ using Galaxon.Numerics.Algorithms.Dijkstra;
 namespace Galaxon.ProjectEuler.Problems81To90;
 
 /// <summary>
-/// Path Sum: Two Ways
-/// <see href="https://projecteuler.net/problem=81"/>
+/// Path Sum: Three Ways
+/// <see href="https://projecteuler.net/problem=82"/>
 /// </summary>
-public static class Problem81
+public static class Problem82
 {
     public static long Example()
     {
@@ -27,7 +27,7 @@ public static class Problem81
         // Open file ProjectEuler/Problems81To90/0081_matrix.txt and read the matrix.
         string[] lines =
             File.ReadAllLines(
-                "/Users/shaun/Documents/Web & software development/C#/Projects/ProjectEuler/ProjectEuler/Problems81To90/0081_matrix.txt");
+                "/Users/shaun/Documents/Web & software development/C#/Projects/ProjectEuler/ProjectEuler/Problems81To90/0082_matrix.txt");
         const int nRows = 80;
         const int nCols = 80;
         int[,] matrix = new int[nRows, nCols];
@@ -51,8 +51,16 @@ public static class Problem81
 
     public static double DijkstraSearch(int[,] matrix)
     {
-        // Convert the matrix into a graph.
+        // Create a graph.
         Graph graph = new ();
+
+        // Add the start and end nodes.
+        string startNodeLabel = "start";
+        string endNodeLabel = "end";
+        Node startNode = graph.AddNode(startNodeLabel);
+        Node endNode = graph.AddNode(endNodeLabel);
+
+        // Copy the matrix into the graph.
         int nRows = matrix.GetLength(0);
         int nCols = matrix.GetLength(1);
         for (int row = 0; row < nRows; row++)
@@ -63,28 +71,32 @@ public static class Problem81
                 string currentNodeLabel = $"{row},{col}";
                 graph.AddNode(currentNodeLabel);
 
-                // Add the edges to the graph that lead to the current node.
+                // Add the up- and down-direction edges that connect the current node to the one above it.
+                // We can't add a single bidirectional edge because the cost of the move comes from
+                // the value of the end node, and thus will be different for an up move vs. a down move.
                 if (row > 0)
                 {
-                    string prevRowNodeLabel = $"{row - 1},{col}";
-                    graph.AddEdge(prevRowNodeLabel, currentNodeLabel, matrix[row, col]);
+                    string aboveNodeLabel = $"{row - 1},{col}";
+                    graph.AddEdge(aboveNodeLabel, currentNodeLabel, matrix[row, col]);
+                    graph.AddEdge(currentNodeLabel, aboveNodeLabel, matrix[row - 1, col]);
                 }
 
-                if (col > 0)
+                // Add the right-direction edges to the graph that lead to the current node.
+                string leftNodeLabel = col == 0 ? startNodeLabel : $"{row},{col - 1}";
+                graph.AddEdge(leftNodeLabel, currentNodeLabel, matrix[row, col]);
+
+                // If we're in the last column, also add a zero-cost path to the end node.
+                if (col == nCols - 1)
                 {
-                    string prevColNodeLabel = $"{row},{col - 1}";
-                    graph.AddEdge(prevColNodeLabel, currentNodeLabel, matrix[row, col]);
+                    graph.AddEdge(currentNodeLabel, endNodeLabel, 0);
                 }
             }
         }
 
         // Set the initial "distance to start" of the start node.
-        string startNodeLabel = "0,0";
-        Node startNode = graph.GetNode(startNodeLabel)!;
-        startNode.distanceFromStart = matrix[0, 0];
+        startNode.distanceFromStart = 0;
 
         // Run the search.
-        string endNodeLabel = $"{nRows - 1},{nCols - 1}";
         graph.ShortestPath(startNodeLabel, endNodeLabel);
 
         // Return the distance from the start to the end node.

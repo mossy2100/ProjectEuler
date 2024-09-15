@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug ProjectEulerTests",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/ProjectEulerTests/bin/Debug/net8.0/ProjectEulerTests.dll",
+            "cwd": "${workspaceFolder}/ProjectEulerTests",
+            "preLaunchTask": "build ProjectEulerTests",
+            "internalConsoleOptions": "openOnSessionStart",
+            "justMyCode": false, // Allow stepping into the Galaxon assemblies
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "Debug Tests in ProjectEulerTests",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}",
+            // "cwd": "${workspaceFolder}/ProjectEulerTests",
+            "internalConsoleOptions": "openOnSessionStart",
+            "justMyCode": false,
+            "preLaunchTask": "build ProjectEulerTests"
+        }
+    ]
+}

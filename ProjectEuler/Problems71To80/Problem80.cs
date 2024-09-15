@@ -1,6 +1,6 @@
 using System.Numerics;
 using Galaxon.Numerics.BigNumbers;
-using Galaxon.Core.Numbers;
+using Galaxon.Numerics.Extensions.Integers;
 
 namespace Galaxon.ProjectEuler;
 

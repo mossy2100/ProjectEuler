@@ -1,5 +1,5 @@
 using Galaxon.Core.Collections;
-using Galaxon.Core.Numbers;
+using Galaxon.Numerics.Extensions;
 using Galaxon.Numerics.Integers;
 
 namespace Galaxon.ProjectEuler;

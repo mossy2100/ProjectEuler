@@ -1,40 +1,50 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+<Project
+    Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
         <RootNamespace>Galaxon.ProjectEuler.Tests</RootNamespace>
+        <DebugType>portable</DebugType>
     </PropertyGroup>
-
     <ItemGroup>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
-        <PackageReference Include="MSTest.TestAdapter" Version="3.2.1" />
-        <PackageReference Include="MSTest.TestFramework" Version="3.2.1" />
-        <PackageReference Include="coverlet.collector" Version="6.0.1">
+        <PackageReference
+            Include="Microsoft.NET.Test.Sdk"
+            Version="17.9.0" />
+        <PackageReference
+            Include="MSTest.TestAdapter"
+            Version="3.2.1" />
+        <PackageReference
+            Include="MSTest.TestFramework"
+            Version="3.2.1" />
+        <PackageReference
+            Include="coverlet.collector"
+            Version="6.0.1">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
     </ItemGroup>
-
     <ItemGroup>
-        <ProjectReference Include="..\ProjectEuler\ProjectEuler.csproj"/>
+        <ProjectReference
+            Include="..\ProjectEuler\ProjectEuler.csproj" />
     </ItemGroup>
-
     <ItemGroup>
-        <Reference Include="Galaxon.Core">
+        <Reference
+            Include="Galaxon.Core">
             <HintPath>..\..\Galaxon\Core\bin\Debug\net8.0\Galaxon.Core.dll</HintPath>
         </Reference>
-        <Reference Include="Galaxon.Numerics.BigNumbers">
+        <Reference
+            Include="Galaxon.Numerics.BigNumbers">
             <HintPath>..\..\Galaxon\Numerics\BigNumbers\bin\Debug\net8.0\Galaxon.Numerics.BigNumbers.dll</HintPath>
         </Reference>
-        <Reference Include="Galaxon.Numerics.Geometry">
+        <Reference
+            Include="Galaxon.Numerics.Geometry">
             <HintPath>..\..\Galaxon\Numerics\Geometry\bin\Debug\net8.0\Galaxon.Numerics.Geometry.dll</HintPath>
         </Reference>
-        <Reference Include="Galaxon.Numerics.Integers">
+        <Reference
+            Include="Galaxon.Numerics.Integers">
             <HintPath>..\..\Galaxon\Numerics\Integers\bin\Debug\net8.0\Galaxon.Numerics.Integers.dll</HintPath>
         </Reference>
     </ItemGroup>
-
 </Project>

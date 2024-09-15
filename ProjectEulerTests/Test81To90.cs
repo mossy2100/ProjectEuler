@@ -1,14 +1,22 @@
+using Galaxon.ProjectEuler.Problems81To90;
+
 namespace Galaxon.ProjectEuler.Tests;
 
 [TestClass]
 public class Test81To90
 {
-    // [TestMethod]
-    // public void TestProblem81() => Assert.AreEqual(428570, Problem81.Answer());
-    //
-    // [TestMethod]
-    // public void TestProblem82() => Assert.AreEqual(303963552391, Problem82.Answer());
-    //
+    [TestMethod]
+    public void TestProblem81Example() => Assert.AreEqual(2427, Problem81.Example());
+
+    [TestMethod]
+    public void TestProblem81() => Assert.AreEqual(427337, Problem81.Answer());
+
+    [TestMethod]
+    public void TestProblem82Example() => Assert.AreEqual(994, Problem82.Example());
+
+    [TestMethod]
+    public void TestProblem82() => Assert.AreEqual(260324, Problem82.Answer());
+
     // [TestMethod]
     // public void TestProblem83() => Assert.AreEqual(7295372, Problem83.Answer());
     //
